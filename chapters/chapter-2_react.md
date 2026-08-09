@@ -179,6 +179,99 @@ import { useState } from "react";
 **17. State directly modify kyun nahi karte?**
 
 **❌ Wrong: `count = count + 1;`**
+
 **✅ Correct:: `setCount(count + 1);`**
 
 - React ko state setter ke through update batana hota hai taaki rendering properly schedule ho.
+
+**18. Previous state ke basis par update?**
+
+Best:
+
+- **`setCount(prev => prev + 1);`**
+
+**19. Props vs State?** 🔥
+
+| Props                  | State                      |
+| ---------------------- | -------------------------- |
+| Parent se milti hain   | Component manage karta hai |
+| Read-only              | Update ho sakti hai        |
+| Data passing           | Dynamic data               |
+| Child shouldn't modify | Setter se update           |
+
+## Part 5 — Events
+
+**20. Click event kaise handle karenge?**
+
+<code><pre>
+function handleClick() {
+  console.log("Clicked");
+}
+
+return (
+  &lt;button onClick={handleClick}&gt;
+    Click
+  &lt;/button&gt;
+);
+</pre></code>
+
+**21. Function me argument pass karna ho?**
+
+<code><pre>
+&lt;button onClick={() => deleteUser(10)}&gt;
+  Delete
+&lt;/button&gt;
+</pre></code>
+
+**22. Ye galat kyun hai?**
+
+`<button onClick={deleteUser(10)}>`
+
+- Kyuki function render ke time execute ho jayega.
+
+- Use: `onClick={() => deleteUser(10)}`
+
+# Part 6 — Conditional Rendering
+
+**23. Conditional rendering kya hai?**
+
+- Condition ke basis par different UI show karna.
+<code><pre>
+if (isLoggedIn) {
+  return &lt;Dashboard /&gt;;
+}
+
+return &lt;Login /&gt;;
+</pre></code>
+
+**24. Ternary operator?**
+
+`{isLoggedIn ? <Dashboard /> : <Login />}`
+
+**25. Sirf true condition par element show?**
+
+`&&`
+
+- `{isAdmin && <AdminPanel />}`
+
+**26. `&&` vs `ternary` ?**
+
+- Sirf true par UI: **`{isLoggedIn && <Logout />}`**
+
+- True/false dono cases: `**{isLoggedIn ? <Logout /> : <Login />}**`
+
+## Part 7 — List Rendering 🔥🔥
+**27. Array ko UI me kaise display karte hain?**
+`map()`
+
+<code><pre>
+const users = ["Amit", "Rahul", "Neha"];
+
+return (
+  &lt;&gt;
+    {users.map(user => (
+      &lt;p&gt;{user}&lt;/p&gt;
+    ))}
+  &lt;/&gt;
+);
+</pre></code>
