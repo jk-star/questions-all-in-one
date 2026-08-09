@@ -570,6 +570,13 @@ printBtn.addEventListener("click", () => {
                     padding:10px;
                 }
 
+                /* Print ke time Copy button hide */
+                @media print {
+                    .copy-btn{
+                        display:none !important;
+                    }
+                }
+
             </style>
 
         </head>

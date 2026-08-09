@@ -199,48 +199,172 @@ $users = $builder->get()->getResult();
 
 ## 19. WHERE query?
 <code><pre>
-$model
-    ->where('status', 1)
-    ->findAll();
+$model ->where('status', 1) ->findAll();
 
 </pre></code>
 
 **Multiple:**
 
 <code><pre>
-$model
-    ->where('status', 1)
-    ->where('role', 'admin')
-    ->findAll();
+$model ->where('status', 1) ->where('role', 'admin') ->findAll();
 
 </pre></code>
 
 ## 20. `where()` + `first()` ?
 <code><pre>
-$user = $model
-    ->where('email', $email)
-    ->first();
+$user = $model ->where('email', $email) ->first();
 </pre></code>
 
 - Commonly login me use hota hai.
 
 ## 21. LIKE search?
 <code><pre>
-$users = $model
-    ->like('name', $keyword)
-    ->findAll();
+$users = $model ->like('name', $keyword) ->findAll();
 </pre></code>
 
 ## 22. Order By?
 <code><pre>
-$users = $model
-    ->orderBy('id', 'DESC')
-    ->findAll();
+$users = $model ->orderBy('id', 'DESC') ->findAll();
 </pre></code>
 
 ## 23. Limit?
 <code><pre>
-$users = $model
-    ->limit(10)
-    ->findAll();
+$users = $model ->limit(10) ->findAll();
+</pre></code>
+
+## 24. JOIN kaise karenge?
+<code><pre>
+$builder = $db->table('users');
+
+$builder->select('users.*, orders.total');
+
+$builder->join(
+    'orders',
+    'orders.user_id = users.id',
+    'left'
+);
+
+$result = $builder->get()->getResult();
+</pre></code>
+
+# Sessions 🔥
+## 25. Session kya hai?
+- Session server side par user-specific data temporarily maintain karta hai.
+<code><pre>
+$session = session();
+$session->set('user_id', 10);
+</pre></code>
+
+**Retrieve:**
+
+- `$userId = session()->get('user_id');`
+
+**Remove:**
+
+- `session()->remove('user_id');`
+
+## 26. Session destroy?
+
+- `session()->destroy();`
+
+- Commonly logout me.
+
+## 27. Flashdata kya hai?
+- Sirf next request tak temporary data store karta hai.
+<code><pre>
+session()->setFlashdata(
+    'success',
+    'User created successfully'
+);
+</pre></code>
+
+**View:**
+
+- `<?= session()->getFlashdata('success') ?>`
+
+## Authentication 🔥🔥
+
+## 28. Login ka basic flow?
+<code><pre>
+Email/password form
+        ↓
+Validation
+        ↓
+Email se user find
+        ↓
+Password verify
+        ↓
+Session create
+        ↓
+Dashboard redirect
+</pre></code>
+
+## 29. Password database me kaise store karna chahiye?
+- Plain password nahi.
+<code><pre>
+$password = password_hash(
+    $this->request->getPost('password'),
+    PASSWORD_DEFAULT
+);
+</pre></code>
+
+## 30. Password verify?
+
+<code><pre>
+if (password_verify($password, $user['password'])) {
+    // login successful
+}
+</pre></code>
+
+## 31. Login session?
+
+<code><pre>
+session()->set([
+    'user_id'   => $user['id'],
+    'user_name' => $user['name'],
+    'logged_in' => true
+]);
+</pre></code>
+
+## 32. Logout?
+<code><pre>
+public function logout()
+{
+    session()->destroy();
+
+    return redirect()->to('/login');
+}
+</pre></code>
+
+# Filters 🔥
+
+## 33. Filter kya hai?
+
+- Controller execute hone ke before/after request ko process kar sakta hai.
+- Authentication ke liye commonly use hota hai.
+<code><pre>
+Request
+   ↓
+Auth Filter
+   ↓
+Controller
+</pre></code>
+
+## 34. Authentication filter ka example?
+<code><pre>
+public function before(
+    \CodeIgniter\HTTP\RequestInterface $request,
+    $arguments = null
+) {
+    if (!session()->get('logged_in')) {
+        return redirect()->to('/login');
+    }
+}
+
+</pre></code>
+
+<code><pre>
+</pre></code>
+
+<code><pre>
 </pre></code>
