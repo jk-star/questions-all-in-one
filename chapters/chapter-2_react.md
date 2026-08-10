@@ -262,6 +262,7 @@ return &lt;Login /&gt;;
 
 ## Part 7 — List Rendering 🔥🔥
 **27. Array ko UI me kaise display karte hain?**
+
 `map()`
 
 <code><pre>
@@ -275,3 +276,292 @@ return (
   &lt;/&gt;
 );
 </pre></code>
+
+**28. key prop kya hai?** 🔥
+- React ko list items uniquely identify karne me help karta hai.
+<code><pre>
+{users.map(user => (
+  &lt;p key={user.id}&gt;
+    {user.name}
+  &lt;/p&gt;
+))}
+</pre></code>
+
+**29. Array index ko key banana sahi hai?**
+
+`key={index}`
+
+- Static list me kabhi acceptable ho sakta hai, lekin insert/delete/reordering wali lists me stable unique ID preferred hai.
+
+`key={user.id}`
+
+## <u>`Part 8 — Forms`</u> 🔥🔥🔥
+
+**30. Controlled Component kya hai?**
+
+- Form input jiska value React state control karti hai.
+const [name, setName] = useState("");
+
+<code><pre>
+&lt;input value={name} onChange={e => setName(e.target.value)} /&gt;
+</pre></code>
+
+**31. Form submit?**
+
+<code><pre>
+function handleSubmit(e) {
+  e.preventDefault();
+
+  console.log(name);
+}
+
+&lt;form onSubmit={handleSubmit}&gt;
+</pre></code>
+
+**32. preventDefault() kyun?**
+
+- Browser ka default form submission/page reload prevent karne ke liye.
+
+**33. Multiple inputs kaise manage karenge?**
+
+<code><pre>
+const [form, setForm] = useState({
+  name: "",
+  email: ""
+});
+
+function handleChange(e) {
+  const { name, value } = e.target;
+
+  setForm(prev => ({
+    ...prev,
+    [name]: value
+  }));
+}
+</pre></code>
+
+**Inputs:**
+
+<code><pre>
+&lt;input
+  name="name"
+  value={form.name}
+  onChange={handleChange}
+/&gt;
+
+&lt;input
+  name="email"
+  value={form.email}
+  onChange={handleChange}
+/&gt;
+</pre></code>
+
+## Part 9 — useEffect 🔥🔥🔥
+**34. useEffect kya hai?**
+- Component ko external systems ke saath synchronize karne ke liye Hook hai, jaise API/network request, subscription, timer, browser APIs etc.
+<code><pre>
+useEffect(() => {
+  console.log("Effect");
+}, []);
+</pre></code>
+
+**35. Empty dependency array `[]`?**
+<code><pre>
+useEffect(() => {
+
+}, []);
+</pre></code>
+
+- Effect initial mount ke baad run hota hai. Development me Strict Mode ki wajah se extra setup/cleanup cycle dikh sakta hai.
+
+**36. Dependency array nahi ho?**
+
+<code><pre>
+useEffect(() => {
+
+});
+</pre></code>
+
+- Effect har render ke baad run karega.
+
+**37. Dependency ho?**
+<code><pre>
+useEffect(() => {
+
+}, [count]);
+</pre></code>
+
+- Initial run aur count change hone par effect re-run hoga.
+
+**38. Cleanup function kya hai?**
+<code><pre>
+useEffect(() => {
+  const timer = setInterval(() => {
+    console.log("Hello");
+  }, 1000);
+
+  return () => {
+    clearInterval(timer);
+  };
+}, []);
+</pre></code>
+
+- Subscriptions, timers, event listeners etc. cleanup karne ke liye.
+
+## Part 10 — API Calling 🔥🔥🔥
+**39. Fetch se API call?**
+<code><pre>
+useEffect(() => {
+  fetch("https://example.com/users")
+    .then(res => res.json())
+    .then(data => setUsers(data))
+    .catch(error => console.error(error));
+}, []);
+</pre></code>
+
+**40. Async/Await se?**
+<code><pre>
+useEffect(() => {
+  async function fetchUsers() {
+    try {
+      const response = await fetch(
+        "https://example.com/users"
+      );
+
+      const data = await response.json();
+
+      setUsers(data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  fetchUsers();
+}, []);
+</pre></code>
+
+**41. Loading state?**
+
+<code><pre>
+const [loading, setLoading] = useState(true);
+</pre></code>
+
+**Example:**
+
+<code><pre>
+if (loading) {
+  return &lt;p&gt;Loading...&lt;/p&gt;;
+}
+</pre></code>
+
+**42. Error handling?**
+<code><pre>
+const [error, setError] = useState(null);
+
+try {
+  // request
+} catch (err) {
+  setError(err.message);
+}
+</pre></code>
+
+## Part 11 — Hooks 🔥🔥
+**43. Hooks kya hain?**
+
+- Hooks functions hain jo functional components ko React features use karne dete hain.
+
+**Important:**
+
+<code><pre>
+useState
+useEffect
+useContext
+useRef
+useReducer
+useMemo
+useCallback
+</pre></code>
+
+**44. Hooks ke important rules?**
+
+**Hooks:**
+
+- Top level par call karein.
+- Loops/conditions ke andar directly call na karein.
+- React components ya custom Hooks me call karein.
+
+## Part 12 — useRef 🔥
+**45. useRef kya hai?**
+- Value/reference ko renders ke beech retain karta hai aur .current change karne se re-render trigger nahi hota.
+
+- Common use: DOM reference.
+
+<code><pre>
+const inputRef = useRef(null);
+
+&lt;input ref={inputRef} /&gt;
+
+&lt;button
+  onClick={() => inputRef.current.focus()}
+&gt;
+  Focus
+&lt;/button&gt;
+</pre></code>
+
+**46. useState vs useRef?**
+
+- **`useState`** update → re-render.
+- **`useRef.current`** update → normally re-render nahi.
+
+## Part 13 — Context API 🔥🔥🔥
+**47. Context API kya hai?**
+
+- Deep component tree me repeatedly props pass kiye bina shared data available karne ka mechanism.
+- Useful for:
+<code><pre>
+Theme
+Authentication
+Language
+Shared app settings/state
+</pre></code>
+
+**48. Context create?**
+<code><pre>
+import { createContext } from "react";
+
+export const UserContext = createContext(null);
+</pre></code>
+
+**49. Provider?**
+- Modern React me context object ko provider ki tarah use kiya ja sakta hai:
+
+<code><pre>
+&lt;UserContext value={user}&gt;
+  &lt;App /&gt;
+&lt;/UserContext&gt;
+</pre></code>
+
+Legacy/common syntax me:
+
+<code><pre>
+&lt;UserContext.Provider value={user}&gt;
+  &lt;App /&gt;
+&lt;/UserContext.Provider&gt;
+</pre></code>
+
+**50. Context consume?**
+- **`const user = useContext(UserContext);`**
+
+**51. Prop drilling kya hai?**
+- Jab data ko intermediate components ke through sirf neeche kisi deeply nested component tak pahunchane ke liye repeatedly props pass karte hain.
+<code><pre>
+App
+ ↓
+Layout
+ ↓
+Header
+ ↓
+Profile
+</pre></code>
+
+- Context kuch situations me ise avoid kar sakta hai.
