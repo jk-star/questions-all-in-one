@@ -1,11 +1,11 @@
 # <u>`React Complete Interview Questions & Answers`</u>
 
-## Part 1 — React Basics
+## <u>`Part 1 — React Basics`<u>
 
 **1. React kya hai?**
 - React ek JavaScript library hai jo reusable components ki help se user interfaces banane ke liye use hoti hai.
 
-**Main points:**
+**`Main points:`**
 - Component-based
 - Declarative
 - Reusable UI
@@ -21,7 +21,7 @@
 - **SPA = Single Page Application**
 - Page ko har navigation par completely reload karne ke bajay required UI dynamically update hoti hai.
 
-**Examples:**
+**`Examples:`**
 
 <code><pre>
 /dashboard
@@ -29,7 +29,7 @@
 /profile
 </pre></code>
 
-**4. Component kya hai?** 
+**4. Component kya hai?**
 - Component reusable UI ka piece hota hai.
 
 <code><pre>
@@ -38,7 +38,7 @@ function Welcome() {
 }
 </pre></code>
 
-**Use:** `<Welcome />`
+**Use: `<Welcome />`**
 
 **5. Functional Component kya hai?**
 - JavaScript function jo JSX return karta hai.
@@ -64,15 +64,15 @@ class Welcome extends React.Component {
 
 - Aaj functional components + Hooks generally preferred hain.
 
-## Part 2 — JSX
+## <u>`Part 2 — JSX`</u>
 
 **7. JSX kya hai?**
 - JSX = JavaScript Syntax Extension
 - JavaScript ke andar HTML-like syntax likhne deta hai.
-- `const heading = <h1>Hello React</h1>;`
+- **`const heading = <h1>Hello React</h1>;`**
 
 **8. JSX me JavaScript kaise likhte hain?**
-- Curly braces `{}` ke andar.
+- Curly braces **`{}`** ke andar.
 
 <code><pre>
 const name = "Jyoti";
@@ -80,8 +80,8 @@ return &lt;h1&gt;Hello {name}&lt;/h1&gt;;
 </pre></code>
 
 **9. JSX me `class` ki jagah `className` kyun?**
-- `<div className="container">`
-- JSX DOM properties ke naming conventions follow karta hai; CSS class ke liye property className hai.    
+- **`<div className="container">`**
+- JSX DOM properties ke naming conventions follow karta hai; CSS class ke liye property className hai.
 
 **10. Inline CSS kaise?**
 
@@ -91,8 +91,8 @@ return &lt;h1&gt;Hello {name}&lt;/h1&gt;;
 &lt;/h1&gt;
 </pre></code>
 
-- Outer `{}` → JavaScript expression.
-- Inner `{}` → style object.
+- Outer **`{}`** → JavaScript expression.
+- Inner **`{}`** → style object.
 
 **11. React Fragment kya hai?**
 
@@ -225,11 +225,11 @@ return (
 
 **22. Ye galat kyun hai?**
 
-`<button onClick={deleteUser(10)}>`
+**`<button onClick={deleteUser(10)}>`**
 
 - Kyuki function render ke time execute ho jayega.
 
-- Use: `onClick={() => deleteUser(10)}`
+- Use: **`onClick={() => deleteUser(10)}`**
 
 ## <u>`Part 6 — Conditional Rendering`</u>
 
@@ -246,13 +246,13 @@ return &lt;Login /&gt;;
 
 **24. Ternary operator?**
 
-`{isLoggedIn ? <Dashboard /> : <Login />}`
+**`{isLoggedIn ? <Dashboard /> : <Login />}`**
 
 **25. Sirf true condition par element show?**
 
-`&&`
+**`&&`**
 
-- `{isAdmin && <AdminPanel />}`
+- **`{isAdmin && <AdminPanel />}`**
 
 **26. `&&` vs `ternary` ?**
 
@@ -263,7 +263,7 @@ return &lt;Login /&gt;;
 ## <u>`Part 7 — List Rendering`</u> 🔥🔥
 **27. Array ko UI me kaise display karte hain?**
 
-`map()`
+**`map()`**
 
 <code><pre>
 const users = ["Amit", "John", "Neha"];
@@ -289,11 +289,11 @@ return (
 
 **29. Array index ko key banana sahi hai?**
 
-`key={index}`
+**`key={index}`**
 
 - Static list me kabhi acceptable ho sakta hai, lekin insert/delete/reordering wali lists me stable unique ID preferred hai.
 
-`key={user.id}`
+**`key={user.id}`**
 
 ## <u>`Part 8 — Forms`</u> 🔥🔥🔥
 
@@ -340,7 +340,7 @@ function handleChange(e) {
 }
 </pre></code>
 
-**Inputs:**
+**`Inputs:`**
 
 <code><pre>
 &lt;input
@@ -446,7 +446,7 @@ useEffect(() => {
 const [loading, setLoading] = useState(true);
 </pre></code>
 
-**Example:**
+**`Example:`**
 
 <code><pre>
 if (loading) {
@@ -470,7 +470,7 @@ try {
 
 - Hooks functions hain jo functional components ko React features use karne dete hain.
 
-**Important:**
+**`Important:`**
 
 <code><pre>
 useState
@@ -484,7 +484,7 @@ useCallback
 
 **44. Hooks ke important rules?**
 
-**Hooks:**
+**`Hooks:`**
 
 - Top level par call karein.
 - Loops/conditions ke andar directly call na karein.
@@ -787,7 +787,7 @@ const numbers = [1, 2, 3];
 const result = numbers.map(n => n * 2);
 </pre></code>
 
-**Result: `[2, 4, 6]`** 
+**Result: `[2, 4, 6]`**
 
 **74. `filter()`?**
 
@@ -881,7 +881,7 @@ Now +3.
 
 **85. useEffect infinite loop kaise ho sakta hai?**
 
-**Example:**
+**`Example:`**
 
 <code><pre>
 useEffect(() => {

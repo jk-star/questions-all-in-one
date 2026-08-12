@@ -29,7 +29,7 @@ Browser Response
 ## 3. CI4 me route kya hota hai?
 - Route URL ko kisi Controller method se map karta hai.
 - **`$routes->get('/users', 'UserController::index');`**
-- `/users` open karne par `index()` execute hoga.
+- **`/users`** open karne par **`index()`** execute hoga.
 
 
 ## 4. GET aur POST route me difference?
@@ -130,7 +130,7 @@ U = Update
 D = Delete
 </pre></code>
 
-**Typical methods:**
+**`Typical methods:`**
 
 <code><pre>
 index()   → List
@@ -144,7 +144,7 @@ delete()  → Delete
 ## 15. Form data kaise receive karenge?
 - **`$name = $this->request->getPost('name');`**
 
-**Multiple:**
+**`Multiple:`**
 
 <code><pre>
 $data = [
@@ -180,7 +180,7 @@ integer
 numeric
 </pre></code>
 
-**Example:**
+**`Example:`**
 
 - **`'email' => 'required|valid_email|is_unique[users.email]'`**
 
@@ -203,7 +203,7 @@ $model ->where('status', 1) ->findAll();
 
 </pre></code>
 
-**Multiple:**
+**`Multiple:`**
 
 <code><pre>
 $model ->where('status', 1) ->where('role', 'admin') ->findAll();
@@ -255,11 +255,11 @@ $session = session();
 $session->set('user_id', 10);
 </pre></code>
 
-**Retrieve:**
+**`Retrieve:`**
 
 - **`$userId = session()->get('user_id');`**
 
-**Remove:**
+**`Remove:`**
 
 - **`session()->remove('user_id');`**
 
@@ -278,7 +278,7 @@ session()->setFlashdata(
 );
 </pre></code>
 
-**View:**
+**`View:`**
 
 - **`<?= session()->getFlashdata('success') ?>`**
 
@@ -371,7 +371,7 @@ public function before(
 
 - **`'auth' => \App\Filters\AuthFilter::class`**
 
-**Route:**
+**`Route:`**
 
 <code><pre>
 $routes->get(
@@ -386,13 +386,13 @@ $routes->get(
 
 ## 36. Controller se View me data kaise pass karenge?
 
-**Controller:**
+**`Controller:`**
 <code><pre>
 $data['users'] = $model->findAll();
 return view('users/index', $data);
 </pre></code>
 
-**View:**
+**`View:`**
 <code><pre>
 <?php foreach ($users as $user): ?>
 
@@ -416,7 +416,7 @@ return view('users/index', $data);
 <?= $this->endSection() ?>
 </pre></code>
 
-**Layout:**
+**`Layout:`**
 
 - **`<?= $this->renderSection('content') ?>`**
 
@@ -432,7 +432,7 @@ $data = [
 return view('users/index', $data);
 </pre></code>
 
-**View:**
+**`View:`**
 
 - **`<?= $pager->links() ?>`**
 
@@ -451,7 +451,7 @@ if ($file->isValid() && !$file->hasMoved()) {
 ## 42. Random filename kaise?
 - **`$newName = $file->getRandomName();`**
 
-**Move:**
+**`Move:`**
 <code><pre>
 $file->move(
     WRITEPATH . 'uploads',
@@ -466,15 +466,15 @@ $file->move(
 - Database schema ko PHP files/code ke through version-control karne ka method hai.
 - **`php spark make:migration CreateUsersTable`**
 
-**Run:**
+**`Run:`**
 
-- **`php spark migrate`**  
+- **`php spark migrate`**
 
 ## 44. Seeder kya hai?
 - Database me sample/default data insert karne ke liye.
 - **`php spark make:seeder UserSeeder`**
 
-**Run:**
+**`Run:`**
 - **`php spark db:seed UserSeeder`**
 
 # <u>`REST API`</u> 🔥🔥
@@ -482,7 +482,7 @@ $file->move(
 
 - HTTP ke through applications ke beech data/resources exchange karne ka architecture style hai.
 
-**Common methods:**
+**`Common methods:`**
 <code><pre>
 GET     → Read
 POST    → Create
@@ -524,7 +524,7 @@ return $this->response->setJSON([
 
 ## 49. XSS kya hai?
 
-- **Cross-Site Scripting**
+- **`Cross-Site Scripting`**
 - Malicious script user input ke through page me inject ho sakti hai.
 - Output escape karein: **`<?= esc($name) ?>`**
 
@@ -532,15 +532,15 @@ return $this->response->setJSON([
 
 - Query Builder, Model aur parameter binding use karein.
 
-**Bad:**
+**`Bad:`**
 
 - **`$sql = "SELECT * FROM users WHERE id = $id";`**
 
-**Better:**
+**`Better:`**
 
 **`$model->find($id);`**
 
-**Ya bindings:**
+**`Ya bindings:`**
 <code><pre>
 $db->query(
     'SELECT * FROM users WHERE id = ?',
@@ -554,7 +554,7 @@ $db->query(
 
 - Environment-specific configuration ke liye.
 
-**Example:**
+**`Example:`**
 
 <code><pre>
 database.default.hostname = localhost
@@ -620,7 +620,7 @@ $routes->get(
 );
 </pre></code>
 
-**Controller:**
+**`Controller:`**
 
 <code><pre>
 public function show($id)
@@ -641,7 +641,7 @@ $routes->group('admin', function ($routes) {
 });
 </pre></code>
 
-- URL `/admin/users`
+- URL **`/admin/users`**
 
 ## 60. Auto Routing kya hai?
 
