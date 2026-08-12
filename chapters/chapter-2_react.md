@@ -1,6 +1,6 @@
 # <u>`React Complete Interview Questions & Answers`</u>
 
-## <u>`Part 1 — React Basics`<u>
+## <u>`Part 1 — React Basics`</u>
 
 **1. React kya hai?**
 - React ek JavaScript library hai jo reusable components ki help se user interfaces banane ke liye use hoti hai.
