@@ -119,3 +119,205 @@ $(function () {
 | **Visible**         | **`$("div:visible")`**         | Visible elements                      |
 | **Hidden**          | **`$("div:hidden")`**          | Hidden elements                       |
 | **Input**           | **`$(":input")`**              | Input, textarea, select, button etc.  |
+
+
+## DOM Manipulation 🔥🔥🔥
+**14. Text get/set kaise?**
+
+**`Get:`**
+<code><pre>
+let text = $("#title").text();
+</pre></code>
+
+**`Set:`**
+<code><pre>
+$("#title").text("Hello");
+
+</pre></code>
+
+**15. `.html()` kya karta hai?**
+
+**`Get:`**
+<code><pre>
+$("#box").html();
+
+</pre></code>
+
+**`Set:`**
+<code><pre>
+$("#box").html("<b>Hello</b>");
+
+</pre></code>
+
+**16. `.text()` vs `.html()` ?**
+
+**`Given:`**
+<code><pre>
+&lt;b&gt;Hello&lt;/b&gt;
+</code></pre>
+
+- **`.text()`** markup ko text ki tarah treat karta hai.
+- **`.html()`** HTML markup read/write karta hai.
+- Untrusted user input ko **`.html()`** me directly inject nahi karna chahiye.
+
+**17. Input ki value kaise get karenge?**
+**`Get:`**
+<code><pre>
+let name = $("#name").val();
+</code></pre>
+
+**`Set:`**
+<code><pre>
+$("#name").val("Jyoti");
+
+</code></pre>
+
+
+**18. Attribute get/set?**
+
+**`Get:`**
+<code><pre>
+$("#image").attr("src");
+
+</code></pre>
+
+**`Set:`**
+<code><pre>
+$("#image").attr(
+    "src",
+    "image.jpg"
+);
+
+</code></pre>
+
+**19. Attribute remove?**
+<code><pre>
+$("#input").removeAttr("disabled");
+
+</code></pre>
+
+**20. .prop() kya hai?** 🔥
+
+- DOM properties handle karne ke liye.
+
+<code><pre>
+$("#checkbox").prop("checked");
+
+</code></pre>
+
+**`Set:`**
+<code><pre>
+$("#checkbox").prop("checked", true);
+
+</code></pre>
+
+**21. `.attr()` vs `.prop()` ?**
+
+- **`attr()`** HTML attribute ko deal karta hai.
+
+- **`prop()`** current DOM property/state ko.
+
+- Checkbox ke current checked state ke liye:
+
+<code><pre>
+$("#checkbox").prop("checked");
+
+</code></pre>
+
+- preferred hai.
+
+## CSS & Classes 🔥
+**22. CSS change?**
+<code><pre>
+$("#title").css("color", "red");
+
+</code></pre>
+
+**`Multiple:`**
+
+<code><pre>
+$("#title").css({
+    color: "red",
+    fontSize: "30px"
+});
+
+</code></pre>
+
+**23. Class add?**
+<code><pre>
+$("#box").addClass("active");
+
+</code></pre>
+
+**24. Class remove?**
+<code><pre>
+$("#box").removeClass("active");
+
+</code></pre>
+
+**25. Toggle class?**
+<code><pre>
+$("#box").toggleClass("active");
+
+</code></pre>
+
+**26. Class exist karti hai?**
+<code><pre>
+$("#box").hasClass("active");
+
+</code></pre>
+
+- Returns boolean.
+
+## Add / Remove Elements
+**27. .append()?**
+- Element ke andar end me content add karta hai.
+<code><pre>
+$("#list").append(
+    "<li>New Item</li>"
+);
+
+</code></pre>
+
+**28. .prepend()?**
+- Element ke andar beginning me.
+<code><pre>
+$("#list").prepend(
+    "<li>First</li>"
+);
+
+</pre></code>
+
+
+**29. .before()?**
+- Selected element ke bahar usse pehle.
+<code><pre>
+$("#box").before("<p>Hello</p>");
+
+</pre></code>
+
+**30. .after()?**
+- Selected element ke bahar uske baad.
+
+<code><pre>
+$("#box").after("<p>Hello</p>");
+
+</pre></code>
+
+**31. Element remove?**
+<code><pre>
+$("#box").remove();
+
+</pre></code>
+
+**32. .empty()?**
+- Selected element ko nahi hatata, uske child content ko remove karta hai.
+
+<code><pre>
+$("#box").empty();
+
+</pre></code>
+
+**33. remove() vs empty()?**
+- **`remove()`** → selected element + descendants remove
+- **`empty()`**  → descendants/content remove, container remains
