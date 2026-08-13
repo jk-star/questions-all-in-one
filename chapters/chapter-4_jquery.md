@@ -1,0 +1,121 @@
+# <u> `jQuery Complete Interview Questions & Answers` </u>
+
+## Part 1 — jQuery Basics
+**1. jQuery kya hai?**
+
+- jQuery ek JavaScript library hai jo DOM manipulation, events, AJAX, animations aur cross-browser operations ko easier banati hai.
+
+**`Common syntax:`**
+
+<code><pre>
+$(selector).action();
+
+</pre></code>
+
+**`Example:`**
+
+<code><pre>
+$("#title").hide();
+
+</pre></code>
+
+**2. jQuery use karne ke advantages?**
+1. Short/easy syntax
+1. DOM manipulation
+1. Event handling
+1. AJAX
+1. Animations
+1. Cross-browser abstractions
+
+- Modern browsers me vanilla JavaScript kaafi powerful ho gaya hai, lekin existing PHP/CodeIgniter projects me jQuery abhi bhi milti hai.
+
+**3. `$` kya hai?**
+
+- **`$`** generally jQuery function ka alias hai.
+
+<code><pre>
+$("#box")
+
+</pre></code>
+
+**`Equivalent:`**
+<code><pre>
+jQuery("#box")
+
+</pre></code>
+
+**4. jQuery ka basic syntax?**
+<code><pre>
+$(selector).action();
+
+</pre></code>
+
+**`Example:`**
+<code><pre>
+$("#box").hide();
+
+</pre></code>
+
+- **`#box`** → selector
+- **`hide()`** → action/method
+
+
+## Document Ready 🔥
+**5. $(document).ready() kya hai?**
+- DOM ready hone ke baad code execute karne ke liye.
+
+<code><pre>
+$(document).ready(function () {
+    console.log("DOM Ready");
+});
+
+</pre></code>
+
+**`Short form:`**
+
+<code><pre>
+$(function () {
+    console.log("DOM Ready");
+});
+
+</pre></code>
+
+**6. document.ready vs window.onload?**
+- **`document.ready`** DOM parse/ready hone par run kar sakta hai.
+- **`window.onload`** images aur other dependent resources load hone ke baad fire hota hai.
+
+
+## Selectors 🔥🔥🔥
+
+| Selector            | Example                    | Kya select karta hai                  |
+| ------------------- | -------------------------- | ------------------------------------- |
+| **ID**              | **`$("#box")`**                | **`id="box"`** wala element               |
+| **Class**           | **`$(".item")`**               | **`class="item"`** wale sab elements      |
+| **Element/Tag**     | **`$("p")`**                   | Sab **`<p>`** elements                    |
+| **Universal**       | **`$("*")`**                   | Page ke sab elements                  |
+| **Multiple**        | **`$("h1, p")`**               | **`<h1>`** aur **`<p>`** dono                 |
+| **Attribute**       | **`$("[type]")`**              | **`type`** attribute wale elements        |
+| **Attribute Value** | **`$("[type='text']")`**       | **`type="text"`**                         |
+| **Descendant**      | **`$(".box p")`**              | **`.box`** ke andar ke sab **`<p>`**          |
+| **Child**           | **`$(".box > p")`**            | **`.box`** ke direct **`<p>`** children       |
+| **First**           | **`$("li:first")`**            | First **`<li>`**                          |
+| **Last**            | **`$("li:last")`**             | Last **`<li>`**                           |
+| **Even**            | **`$("tr:even")`**             | Even-indexed rows                     |
+| **Odd**             | **`$("tr:odd")`**              | Odd-indexed rows                      |
+| **Eq**              | **`$("li:eq(2)")`**            | Index **`2`** wala element                |
+| **Gt**              | **`$("li:gt(2)")`**            | Index 2 se greater elements           |
+| **Lt**              | **`$("li:lt(2)")`**            | Index 2 se smaller elements           |
+| **First-child**     | **`$("li:first-child")`**      | Parent ka first child **`<li>`**          |
+| **Last-child**      | **`$("li:last-child")`**       | Parent ka last child **`<li>`**           |
+| **Nth-child**       | **`$("li:nth-child(2)")`**     | Parent ka 2nd child                   |
+| **Contains**        | **`$("p:contains('Hello')")`** | **`Hello`** text contain karne wale **`<p>`** |
+| **Has**             | **`$("div:has(p)")`**          | Jinke andar **`<p>`** hai                 |
+| **Not**             | **`$("input:not(.email)")`**   | **`.email`** ko chhodkar inputs           |
+| **Checked**         | **`$(":checked")`**            | Checked checkbox/radio                |
+| **Selected**        | **`$(":selected")`**           | Selected **`<option>`**                   |
+| **Disabled**        | **`$(":disabled")`**           | Disabled form elements                |
+| **Enabled**         | **`$(":enabled")`**            | Enabled form elements                 |
+| **Empty**           | **`$("div:empty")`**           | Empty elements                        |
+| **Visible**         | **`$("div:visible")`**         | Visible elements                      |
+| **Hidden**          | **`$("div:hidden")`**          | Hidden elements                       |
+| **Input**           | **`$(":input")`**              | Input, textarea, select, button etc.  |
