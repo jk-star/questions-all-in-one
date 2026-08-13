@@ -1,9 +1,9 @@
 
-# JavaScript Complete Interview Questions & Answers
-## 1. JavaScript kya hai?
+# <u>`JavaScript Complete Interview Questions & Answers`</u>
+## <u>`1. JavaScript kya hai?`</u>
 - JavaScript ek high-level, dynamically typed programming language hai jo web pages ko interactive banane ke liye use hoti hai. Browser ke alawa Node.js jaise runtimes me bhi chalti hai.
 
-## JavaScript Complete Interview Questions & Answers
+## <u>`JavaScript Complete Interview Questions & Answers`</u>
 
 | Feature              | var      | let   | const |
 | -------------------- | -------- | ----- | ----- |
@@ -24,7 +24,7 @@ const name = "Amit";
 - Modern JavaScript me generally **`const`** first choice aur reassignment ho to **`let`**.
 
 
-## Data Types
+## <u>`Part 1 — Data Types`</u>
 
 **3. JavaScript ke data types?**
 
@@ -73,7 +73,7 @@ typeof undefined;   // "undefined"
 - Famous tricky question: **`typeof null;`**
 - Output: **`object`** Ye JavaScript ka historical behavior hai.
 
-## Operators
+## <u>`Part 2 — Operators`</u>
 **6. == aur === me difference? 🔥🔥**
 
 - **`==`** type coercion kar sakta hai. **`5 == "5"; // true`**
@@ -88,7 +88,7 @@ typeof undefined;   // "undefined"
 - **`!==`** strict inequality hai.
 
 
-## Conditions
+## <u>`Part 3 — Conditions`</u>
 **8. Ternary operator kya hai?**
 - Short conditional expression:
 <code><pre>
@@ -117,7 +117,7 @@ console.log(count || 10); // 10
 console.log(count ?? 10); // 0
 </pre></code>
 
-## Functions 🔥🔥
+## <u>`Part 4 — Functions`</u> 🔥🔥
 **12. Function Declaration?**
 <code><pre>
 function add(a, b) {
@@ -139,7 +139,7 @@ const add = (a, b) => {
 };
 </pre></code>
 
-- **Short: `const add = (a, b) => a + b;`** 
+- **Short: `const add = (a, b) => a + b;`**
 
 **15. Normal function vs Arrow function?**
 - Important difference: arrow function ka apna **`this`** nahi hota; wo surrounding lexical **`this`** use karti hai.
@@ -166,11 +166,11 @@ function sum(...numbers) {
 }
 </pre></code>
 
-## Scope 🔥🔥
+## <u>`Part 5 — Scope`</u> 🔥🔥
 
 **18. Scope kya hai?**
 - Variable kaha accessible hai, ye scope determine karta hai.
-**Important:**
+**`Important:`**
 <code><pre>
 Global Scope
 Function Scope
@@ -198,11 +198,11 @@ function test() {
 console.log(name); // Error
 </pre></code>
 
-## Hoisting 🔥🔥🔥
+## <u>`Part 6 — Hoisting`</u> 🔥🔥🔥
 **21. Hoisting kya hai?**
 - JavaScript execution se pehle declarations ko process karta hai.
 
-**Example:**
+**`Example:`**
 <code><pre>
 console.log(a);
 var a = 10;
@@ -210,7 +210,7 @@ var a = 10;
 
 **`Output: undefined`**
 
-**Conceptually:**
+**`Conceptually:`**
 <code><pre>
 var a;
 console.log(a);
@@ -232,7 +232,7 @@ console.log(name); // ReferenceError
 let name = "Amit";
 </pre></code>
 
-## Arrays 🔥🔥🔥
+## <u>`Part 7 — Arrays`</u> 🔥🔥🔥
 **24. map() kya karta hai?**
 - Har item ko transform karke new array return karta hai.
 <code><pre>
@@ -369,7 +369,7 @@ const result = arr.slice(1, 3);
 arr.splice(1, 2);
 </pre></code>
 
-## Objects 🔥🔥
+## <u>`Part 8 — Objects`</u> 🔥🔥
 **37. Object kya hai?**
 - Key-value pairs ka collection.
 <code><pre>
@@ -392,13 +392,13 @@ const user = {
 const { name, age } = user;
 </pre></code>
 
-**Array:**
+**`Array:`**
 <code><pre>
 const numbers = [10, 20];
 const [first, second] = numbers;
 </pre></code>
 
-## Spread & Rest 🔥🔥🔥
+## <u>`Part 9 —  Spread & Rest`</u> 🔥🔥🔥
 **40. Spread operator?**
 - Array/object ko expand/copy/merge karne me useful.
 
@@ -412,7 +412,7 @@ const arr2 = [
 
 **`Result: [1, 2, 3]`**
 
-**Object:**
+**`Object:`**
 
 <code><pre>
 const updatedUser = {
@@ -433,7 +433,7 @@ function test(...args) {
 }
 </pre></code>
 
-## Strings
+## <u>`Part 9 — Strings`</u>
 **42. Template literals?** 🔥
 <code><pre>
 const name = "Amit";
@@ -454,7 +454,7 @@ slice()
 split()
 </pre></code>
 
-## Truthy / Falsy 🔥🔥
+## <u>`Part 10 — Truthy / Falsy`</u> 🔥🔥
 **44. Falsy values kaunse hain?**
 
 - Common falsy values:
@@ -473,14 +473,14 @@ NaN
 
 - Falsy values ko chhodkar almost everything truthy hota hai.
 
-**Tricky:**
+**`Tricky:`**
 
 <code><pre>
 Boolean([]); // true
 Boolean({}); // true
 </pre></code>
 
-## null vs undefined
+## <u>`Part 11 — null vs undefined`</u>
 **46. Difference?** 🔥
 
 - **`undefined`** → value assign nahi hui / missing.
@@ -493,7 +493,7 @@ let name;
 let user = null;
 </pre></code>
 
-## Optional Chaining
+## <u>`Part 12 — Optional Chaining`</u>
 **47. ?. kya hai?** 🔥
 - Nested property safely access karne ke liye.
 <code><pre>
@@ -502,7 +502,7 @@ const city = user?.address?.city;
 
 - Agar intermediate value nullish hai to error ki jagah **`undefined`**.
 
-## Callbacks 🔥🔥
+## <u>`Part 13 — Callbacks`</u> 🔥🔥
 **48. Callback function kya hai?**
 - Ek function jo dusre function ko argument ke roop me diya jata hai.
 <code><pre>
@@ -517,7 +517,7 @@ greet("Amit", () => {
 });
 </pre></code>
 
-## Higher-Order Functions
+## <u>`Part 14 — Higher-Order Functions`</u>
 
 **49. Higher-order function kya hai?**
 
@@ -525,14 +525,14 @@ Jo function:
 - function ko argument le, ya
 - function return kare.
 
-**Examples:**
+**`Examples:`**
 <code><pre>
 map()
 filter()
 reduce()
 </pre></code>
 
-## Closure 🔥🔥🔥
+## <u>`Part 15 — Closure`</u> 🔥🔥🔥
 **50. Closure kya hai?**
 - Inner function apne outer lexical scope ke variables ko outer function execute hone ke baad bhi access kar sakta hai.
 <code><pre>
@@ -553,7 +553,7 @@ console.log(increment()); // 2
 
 - Ye very common interview question hai.
 
-## this Keyword 🔥🔥🔥
+## Part 16 — this Keyword 🔥🔥🔥
 **51. `this` kya hai?**
 
 - **`this`** ka value function ko kaise call kiya gaya hai us par depend karta hai (arrow functions lexical this use karti hain).
@@ -571,7 +571,7 @@ user.showName();
 
 **`Output: Amit`**
 
-## call, apply, bind 🔥🔥
+## Part 17 — call, apply, bind 🔥🔥
 **52. `call()` kya hai?**
 - Function ko immediately call karke **`this`** specify karta hai.
 <code><pre>
@@ -598,7 +598,7 @@ apply → execute now, args array
 bind  → new bound function
 </pre></code>
 
-## Async JavaScript 🔥🔥🔥
+## Part 18 — Async JavaScript 🔥🔥🔥
 **55. Synchronous vs Asynchronous?**
 
 **`Synchronous:`**
@@ -619,7 +619,7 @@ Timers
 File/network operations
 </pre></code>
 
-## Promise 🔥🔥🔥
+## Part 19 — Promise 🔥🔥🔥
 **56. Promise kya hai?**
 - Asynchronous operation ke eventual completion/failure ko represent karta hai.
 
@@ -659,7 +659,7 @@ promise
   });
 </pre></code>
 
-## Async/Await 🔥🔥🔥
+## Part 20 — Async/Await 🔥🔥🔥
 **59. async/await kya hai?**
 - Promises ko readable async syntax me handle karta hai.
 <code><pre>
@@ -686,7 +686,7 @@ async function getUsers() {
 }
 </pre></code>
 
-## Event Loop 🔥🔥🔥
+## Part 21 — Event Loop 🔥🔥🔥
 **61. Event Loop kya hai?**
 
 - JavaScript execution model me event loop tasks ko coordinate karta hai, including call stack aur queued asynchronous callbacks.
@@ -746,7 +746,7 @@ B
 - Promise callback microtask queue me hota hai, jo timer task se pehle process hota hai.
 
 
-## DOM 🔥🔥
+## Part 22 — DOM 🔥🔥
 **64. DOM kya hai?**
 
 **`Document Object Model`**
@@ -780,7 +780,7 @@ element.classList.remove("active");
 element.classList.toggle("active");
 </pre></code>
 
-## Events 🔥🔥
+## Part 23 — Events 🔥🔥
 **68. Event listener?**
 <code><pre>
 button.addEventListener(
@@ -831,7 +831,7 @@ document
 
 - Dynamic lists me useful.
 
-## Storage 🔥🔥
+## Part 24 — Storage 🔥🔥
 **72. localStorage kya hai?**
 - Browser me persistent key/value storage.
 <code><pre>
@@ -867,7 +867,7 @@ const user = JSON.parse(
 - **`localStorage`** → browser sessions ke across persist karta hai until removed.
 - **`sessionStorage`** → current tab/page session tak.
 
-## JSON
+## Part 25 — JSON
 **75. JSON kya hai?**
 - JavaScript Object Notation
 - Data exchange format.
@@ -881,7 +881,7 @@ JSON.stringify(user);
 JSON.parse(data);
 </pre></code>
 
-## Shallow vs Deep Copy 🔥🔥
+## Part 26 — Shallow vs Deep Copy 🔥🔥
 **76. Shallow copy?**
 <code><pre>
 const copy = {
@@ -899,7 +899,7 @@ const copy = structuredClone(user);
 
 - **`JSON.parse(JSON.stringify(...))`** limited workaround hai aur har JS value/type ko preserve nahi karta.
 
-## ES Modules
+## Part 27 — ES Modules
 **78. Export?**
 <code><pre>
 export const name = "Amit";
@@ -922,7 +922,7 @@ import { name } from "./data.js";
 
 - React me extremely important.
 
-## Error Handling
+## Part 28 — Error Handling
 **80. try/catch?**
 <code><pre>
 try {
