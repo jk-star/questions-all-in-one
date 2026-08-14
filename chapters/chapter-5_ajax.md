@@ -1,6 +1,6 @@
-# AJAX Complete Interview Questions — Hinglish
+# <u> `AJAX Complete Interview Questions` </u>
 
-## 1. AJAX kya hai?
+## <u> `1. AJAX kya hai?` </u>
 - AJAX ka full form hai **Asynchronous JavaScript and XML**.
 - AJAX ek technique hai jiske through hum **page ko completely reload kiye bina server se data send/receive** kar sakte hain.
 
@@ -21,7 +21,7 @@ $.ajax({
 
 ---
 
-## 2. AJAX ka full form kya hai?
+## <u> `2. AJAX ka full form kya hai?` </u>
 
 ```text
 A = Asynchronous  
@@ -34,7 +34,7 @@ X = XML
 
 ---
 
-## 3. AJAX ka use kyun karte hain?
+## <u> `3. AJAX ka use kyun karte hain?`</u>
 
 - AJAX ka main purpose hai:
 
@@ -49,15 +49,15 @@ X = XML
     - Pagination
     - CRUD operations
 
-**`Example:`**
+**Example:**
 
 - User search box mein **`"php"`** type karta hai → AJAX server ko request bhejta hai → results aa jaate hain → **poora page reload nahi hota**.
 
 ---
 
-## 4. AJAX kaise work karta hai?
+## <u> `4. AJAX kaise work karta hai?` </u>
 
-**`Typical flow:`**
+**Typical flow:**
 
 ```text
 User Action
@@ -79,7 +79,7 @@ JavaScript
 DOM Update
 ```
 
-**`Example:`**
+**Example:**
 
 ```text
 Button Click
@@ -98,11 +98,11 @@ HTML Update
 ```
 ---
 
-## 5. AJAX mein asynchronous ka kya meaning hai?
+## 5. <u> `AJAX mein asynchronous ka kya meaning hai?` </u>
 
 - Asynchronous ka matlab hai browser request bhejne ke baad **poore page ko block/reload nahi karta**.
 
-**`Example:`**
+**Example:**
 
 ```javascript
 $.ajax({
@@ -118,11 +118,11 @@ console.log("Hello");
 
 ---
 
-## 6. AJAX synchronous kya hota hai?
+## <u> `6. AJAX synchronous kya hota hai?` </u>
 
 - Synchronous request mein browser request complete hone ka wait karta hai.
 
-**`Conceptually:`**
+**Conceptually:**
 
 ```text
 Request
@@ -138,16 +138,16 @@ Continue
 
 ---
 
-## 7. Kya AJAX ek programming language hai?
+## <u> `7. Kya AJAX ek programming language hai?` </u>
 
 - No. AJAX koi programming language nahi hai.
 - Ye ek **web development technique/pattern** hai jo JavaScript aur HTTP requests ka use karti hai.
 
 ---
 
-## 8. AJAX mein kaun-kaun si technologies use hoti hain?
+## <u> `8. AJAX mein kaun-kaun si technologies use hoti hain?` </u>
 
-**`Commonly:`**
+**Commonly:**
 
 - JavaScript
 - XMLHttpRequest
@@ -161,11 +161,11 @@ Continue
 
 ---
 
-## 9. `XMLHttpRequest` kya hai?
+## <u> `9. XMLHttpRequest kya hai?` </u>
 
 - **`XMLHttpRequest`** browser ka built-in JavaScript object hai jo server ke saath HTTP requests communicate karne ke liye use hota hai.
 
-**`Example:`**
+**Example:**
 
 ```javascript
 let xhr = new XMLHttpRequest();
@@ -183,9 +183,9 @@ xhr.send();
 
 ---
 
-## 10. `XMLHttpRequest` ke important methods kaun se hain?
+## <u> `10. XMLHttpRequest ke important methods kaun se hain?` </u>
 
-**`Important methods:`**
+**Important methods:**
 
 ```javascript
 open()
@@ -194,7 +194,7 @@ setRequestHeader()
 abort()
 ```
 
-**`Example:`**
+**Example:**
 
 ```javascript
 xhr.open("POST", "login.php", true);
@@ -207,11 +207,11 @@ xhr.send("email=test@gmail.com");
 
 ---
 
-## 11. AJAX ke liye XMLHttpRequest ke alawa kya use kar sakte hain?
+## <u> `11. AJAX ke liye XMLHttpRequest ke alawa kya use kar sakte hain?`</u>
 
-**`Modern JavaScript mein:`**
+**Modern JavaScript mein:**
 
-**`Fetch API`**
+**Fetch API**
 
 ```javascript
 fetch("users.php")
@@ -221,7 +221,7 @@ fetch("users.php")
     });
 ```
 
-**`Aur jQuery mein:`**
+**Aur jQuery mein:**
 
 ```javascript
 $.ajax();
@@ -229,21 +229,21 @@ $.ajax();
 
 ---
 
-## 12. Fetch aur AJAX mein difference?
+## <u> `12. Fetch aur AJAX mein difference?` </u>
 
 - Strictly speaking, **Fetch API bhi AJAX-style asynchronous HTTP communication ka modern approach hai**.
 
-**`Interview mein bol sakti hain:`**
+**Interview mein bol sakti hain:**
 
 - AJAX ek technique/concept hai, jabki Fetch API us technique ko implement karne ka modern JavaScript API hai.
 
 ---
 
-## 13. jQuery AJAX kya hai?
+## <u> `13. jQuery AJAX kya hai?` </u>
 
 - jQuery AJAX methods server ko asynchronous HTTP requests bhejne ko easy banate hain.
 
-**`Example:`**
+**Example:**
 
 ```javascript
 $.ajax({
@@ -256,7 +256,7 @@ $.ajax({
 ```
 ---
 
-## 14. `$.ajax()` kya hai?
+## <u> `14. $.ajax() kya hai?` </u>
 
 - **`$.ajax()`** jQuery ka generic AJAX method hai.
 - Ismein hum specify kar sakte hain:
@@ -274,7 +274,7 @@ $.ajax({
 ```
 ---
 
-## 15. `$.get()` kya hai?
+## <u> `15. $.get() kya hai?` </u>
 - GET request ke liye jQuery ka shorthand method.
 
 ```javascript
@@ -285,7 +285,7 @@ $.get("users.php", function(response) {
 
 ---
 
-## 16. `$.post()` kya hai?
+## <u> `16. $.post() kya hai?` </u>
 - POST request ke liye shorthand method.
 
 ```javascript
@@ -302,7 +302,7 @@ $.post(
 ```
 ---
 
-## 17. `$.ajax()` vs `$.get()` vs `$.post()`?
+## <u> ` 17. $.ajax() vs $.get() vs $.post() ? ` </u>
 
 | Method | Use |
 |---|---|
@@ -310,13 +310,13 @@ $.post(
 | **`$.get()`** | Simple GET |
 | **`$.post()`** | Simple POST |
 
-**`Interview mein:`**
+**Interview mein:**
 
 - **`$.ajax()`** more configurable hai, while `$.get()` aur `$.post()` shorthand methods hain.
 
 ---
 
-## 18. AJAX GET request kya hoti hai?
+## <u> `18. AJAX GET request kya hoti hai?`</u>
 - GET ka use generally server se data retrieve karne ke liye hota hai.
 
 ```javascript
@@ -330,7 +330,7 @@ $.ajax({
 ```
 ---
 
-## 19. AJAX POST request kya hoti hai?
+## <u> `19. AJAX POST request kya hoti hai?`</u>
 - POST ka use generally data server ko send karne ke liye hota hai.
 
 ```javascript
@@ -348,7 +348,7 @@ $.ajax({
 ```
 ---
 
-## 20. GET vs POST?
+## <u> `20. GET vs POST?` </u>
 
 | GET | POST |
 |---|---|
@@ -362,11 +362,11 @@ $.ajax({
 
 ---
 
-## 21. AJAX mein JSON kya hai?
+## <u> `21. AJAX mein JSON kya hai?` </u>
 - JSON = **JavaScript Object Notation**
 - Server aur client ke beech structured data exchange ke liye commonly use hota hai.
 
-**`Example:`**
+**Example:**
 
 ```json
 {
@@ -378,7 +378,7 @@ $.ajax({
 
 ---
 
-## 22. PHP se JSON response kaise bhejenge?
+## <u> `22. PHP se JSON response kaise bhejenge?` </u>
 
 ```php
 $data = [
@@ -392,8 +392,8 @@ echo json_encode($data);
 ```
 ---
 
-## 23. AJAX response ko JSON mein kaise receive karenge?
-**`jQuery:`**
+## <u> `23. AJAX response ko JSON mein kaise receive karenge?` </u>
+**jQuery:**
 
 ```javascript
 $.ajax({
@@ -407,16 +407,16 @@ $.ajax({
 ```
 ---
 
-## 24. `dataType` kya hota hai?
+## <u> `24. dataType kya hota hai?` </u>
 - **`dataType` batata hai ki client response ko kis format mein expect kar raha hai**.
 
-**`Example:`**
+**Example:**
 
 ```javascript
 dataType: "json"
 ```
 
-**`Possible values:`**
+**Possible values:**
 
 ```text
 json
@@ -427,22 +427,22 @@ script
 ```
 ---
 
-## 25. `contentType` kya hota hai?
+## <u> `25. contentType kya hota hai?` </u>
 - **`contentType`** batata hai ki **client server ko kis format mein data send kar raha hai**.
 
-**`Example:`**
+**Example:**
 
 ```javascript
 contentType: "application/json"
 ```
 
-**`Important interview point:`**
+**Important interview point:**
 
-- > **`contentType`** request ke body format se related hai, while `dataType` response ke expected format se related hai.
+- **`contentType`** request ke body format se related hai, while `dataType` response ke expected format se related hai.
 
 ---
 
-## 26. `data` property kya karti hai?
+## <u> `26. data property kya karti hai?` </u>
 - AJAX request ke saath server ko data send karne ke liye.
 
 ```javascript
@@ -457,7 +457,7 @@ $.ajax({
 ```
 ---
 
-## 27. AJAX mein `success` kya hai?
+## <u> `27. AJAX mein success kya hai?` </u>
 - Request successful hone par callback execute hota hai.
 
 ```javascript
@@ -467,9 +467,9 @@ success: function(response) {
 ```
 ---
 
-## 28. AJAX mein `error` kya hai?
+## <u> `28. AJAX mein error kya hai?` </u>
 
-Request fail hone par execute hota hai.
+- Request fail hone par execute hota hai.
 
 ```javascript
 error: function(xhr, status, error) {
@@ -478,7 +478,7 @@ error: function(xhr, status, error) {
 ```
 ---
 
-## 29. AJAX mein `complete` kya hai?
+## <u> `29. AJAX mein complete kya hai?` </u>
 - Request complete hone ke baad execute hota hai, chahe success ho ya failure.
 
 ```javascript
@@ -489,7 +489,7 @@ complete: function() {
 
 ---
 
-## 30. `beforeSend` kya hota hai?
+## <u> `30. beforeSend kya hota hai?` </u>
 - Request send hone se pehle execute hota hai.
 - Commonly loader show karne ke liye:
 
@@ -500,7 +500,7 @@ beforeSend: function() {
 ```
 ---
 
-## 31. AJAX loader kaise banayenge?
+## <u> `31. AJAX loader kaise banayenge?` </u>
 
 ```javascript
 $.ajax({
@@ -521,9 +521,9 @@ $.ajax({
 ```
 ---
 
-## 32. AJAX mein HTTP status code kya hota hai?
+## <u> `32. AJAX mein HTTP status code kya hota hai?` </u>
 
-**`Important codes:`**
+**Important codes:**
 
 ```text
 200 → OK
@@ -537,18 +537,18 @@ $.ajax({
 ```
 ---
 
-## 33. AJAX mein 404 error ka meaning?
+## <u> `33. AJAX mein 404 error ka meaning?` </u>
 
 **`404 = Resource Not Found`**
 
-**`Usually:`**
+**Usually:**
 
 - URL wrong
 - Route wrong
 - File missing
 - Controller route missing
 
-**`Example:`**
+**Example:**
 
 ```javascript
 url: "user/list"
@@ -558,7 +558,7 @@ url: "user/list"
 
 ---
 
-## 34. AJAX mein 500 error ka meaning?
+## <u> `34. AJAX mein 500 error ka meaning?` </u>
 
 **`500 = Internal Server Error`**
 
@@ -573,16 +573,16 @@ url: "user/list"
 
 ---
 
-## 35. AJAX mein 401 vs 403?
-**`401 Unauthorized`**
+## <u> `35. AJAX mein 401 vs 403?` </u>
+**401 Unauthorized**
 - Usually authentication missing/invalid.
 
-**`403 Forbidden`**
+**403 Forbidden**
 - User authenticated ho sakta hai but uske paas requested resource ka permission nahi hai.
 
 ---
 
-## 36. AJAX form submit kaise karenge?
+## <u> `36. AJAX form submit kaise karenge?` </u>
 
 ```javascript
 $("#userForm").submit(function(e) {
@@ -603,7 +603,7 @@ $("#userForm").submit(function(e) {
 ```
 ---
 
-## 37. `preventDefault()` kyun use karte hain?
+## <u> `37. preventDefault() kyun use karte hain?` </u>
 - Normal form submit browser ko page reload/navigation karwa sakta hai.
 
 ```javascript
@@ -614,11 +614,11 @@ e.preventDefault();
 
 ---
 
-## 38. `serialize()` kya hai?
+## 38. <u> `serialize() kya hai?` </u>
 
 - Form ke fields ko URL-encoded string mein convert karta hai.
 
-**`HTML:`**
+**HTML:**
 
 ```html
 <form id="userForm">
@@ -627,20 +627,20 @@ e.preventDefault();
 </form>
 ```
 
-**`JavaScript:`**
+**JavaScript:**
 
 ```javascript
 let data = $("#userForm").serialize();
 ```
 
-**`Result conceptually:`**
+**Result conceptually:**
 
 ```text
 name=Jyoti&email=test%40gmail.com
 ```
 ---
 
-## 39. AJAX mein FormData kya hai?
+## <u> `39. AJAX mein FormData kya hai?` </u>
 
 - **`FormData`** form data ko easily request ke through send karne ke liye use hota hai.
 - Especially **file upload** ke liye useful hai.
@@ -660,7 +660,7 @@ $.ajax({
 ```
 ---
 
-## 40. AJAX se image/file upload kaise karenge?
+## <u> `40. AJAX se image/file upload kaise karenge?` </u>
 
 ```javascript
 let formData = new FormData();
@@ -682,18 +682,18 @@ $.ajax({
 ```
 ---
 
-## 41. `processData: false` kyun?
+## <u> `41. processData: false kyun?` </u>
 - jQuery normally data ko query-string format mein process karta hai.
 - File/FormData ke case mein hume ye processing nahi chahiye.
 
-**`Isliye:`**
+**Isliye:**
 
 ```javascript
 processData: false
 ```
 ---
 
-## 42. `contentType: false` kyun?
+## 42. <u> `contentType: false kyun?` </u>
 
 - Browser ko FormData ka correct multipart content type/boundary automatically set karne dene ke liye.
 
@@ -702,7 +702,7 @@ contentType: false
 ```
 ---
 
-## 43. AJAX mein dynamic dropdown kaise banayenge?
+## 43. <u> `AJAX mein dynamic dropdown kaise banayenge?` </u>
 
 **Example:**
 
@@ -738,11 +738,11 @@ $("#country").change(function() {
 
 ---
 
-## 44. AJAX dependent dropdown kya hai?
+## <u> `44. AJAX dependent dropdown kya hai?` </u>
 
-Jab ek dropdown ki value ke according doosre dropdown ka data change ho, use dependent dropdown kehte hain.
+- Jab ek dropdown ki value ke according doosre dropdown ka data change ho, use dependent dropdown kehte hain.
 
-**`Example:`**
+**Example:**
 
 ```text
 Country → State → City
@@ -752,21 +752,21 @@ Department → Employee
 
 ---
 
-## 45. AJAX search autocomplete kaise work karta hai?
+## <u> `45. AJAX search autocomplete kaise work karta hai?`</u>
 
-**`User type karta hai:`**
+**User type karta hai:**
 
 ```text
 jav
 ```
 
-**`AJAX request:`**
+**AJAX request:**
 
 ```text
 jav → server
 ```
 
-**`Server results return karta hai:`**
+**Server results return karta hai:**
 
 ```text
 Java
@@ -777,9 +777,9 @@ Java Developer
 - Frontend results show karta hai.
 ---
 
-## 46. AJAX pagination kya hai?
+## <u> `46. AJAX pagination kya hai?` </u>
 
-**`Traditional pagination:`**
+**Traditional pagination:**
 
 ```text
 Page 1
@@ -789,7 +789,7 @@ Full page reload
 Page 2
 ```
 
-**`AJAX pagination:`**
+**AJAX pagination:**
 
 ```text
 Page 1
@@ -802,9 +802,9 @@ Only table/list update
 ```
 ---
 
-## 47. AJAX CRUD kya hai?
+## <u> `47. AJAX CRUD kya hai?` </u>
 
-**`CRUD:`**
+**CRUD:**
 
 ```text
 C → Create
@@ -813,7 +813,7 @@ U → Update
 D → Delete
 ```
 
-**`AJAX ke through:`**
+**AJAX ke through:**
 
 ```text
 Add User → AJAX POST
@@ -823,7 +823,7 @@ Delete User → AJAX DELETE/POST
 ```
 ---
 
-## 48. AJAX CRUD ka real example?
+## <u> `48. AJAX CRUD ka real example?` </u>
 
 ```javascript
 $.ajax({
@@ -837,7 +837,7 @@ $.ajax({
 });
 ```
 
-**`Then:`**
+**Then:**
 
 ```javascript
 function loadUsers() {
@@ -855,7 +855,7 @@ function loadUsers() {
 ```
 ---
 
-## 49. AJAX DELETE request possible hai?
+## <u> `49. AJAX DELETE request possible hai?` </u>
 
 Yes.
 
@@ -874,9 +874,9 @@ $.ajax({
 
 ---
 
-## 50. AJAX mein `async: false` kya hai?
+## <u> `50. AJAX mein async: false kya hai?` </u>
 
-**`Example:`**
+**Example:**
 
 ```javascript
 $.ajax({
@@ -890,7 +890,7 @@ $.ajax({
 
 ---
 
-## 51. AJAX mein timeout kya hota hai?
+## <u> `51. AJAX mein timeout kya hota hai?` </u>
 
 - Maximum time define karne ke liye:
 
@@ -905,7 +905,7 @@ $.ajax({
 
 ---
 
-## 52. AJAX request cancel kaise karenge?
+## <u> `52. AJAX request cancel kaise karenge?` </u>
 
 - jQuery AJAX **`jqXHR`** object return karta hai.
 
@@ -921,7 +921,7 @@ request.abort();
 
 ---
 
-## 53. AJAX request mein headers kaise bhejenge?
+## <u> `53. AJAX request mein headers kaise bhejenge?` </u>
 
 ```javascript
 $.ajax({
@@ -934,14 +934,14 @@ $.ajax({
 ```
 ---
 
-## 54. AJAX mein CSRF kya hai?
+## <u> `54. AJAX mein CSRF kya hai?` </u>
 - CSRF = **Cross-Site Request Forgery**
 - Attacker victim ke authenticated browser ka misuse karke unwanted request karne ki koshish karta hai.
 - Frameworks like CodeIgniter CSRF protection provide karte hain.
 
 ---
 
-## 55. AJAX request mein CSRF token kaise bhejenge?
+## <u> `55. AJAX request mein CSRF token kaise bhejenge?` </u>
 
 **`Conceptually:`**
 
@@ -960,11 +960,11 @@ $.ajax({
 
 ---
 
-## 56. CORS kya hai?
+## <u> `56. CORS kya hai?` </u>
 - CORS = **Cross-Origin Resource Sharing**
 - Agar frontend aur backend different origins par hain, browser security policy request ko restrict kar sakti hai.
 
-**`Example:`**
+**Example:**
 
 ```text
 Frontend:
@@ -978,17 +978,17 @@ https://api.example.com
 
 ---
 
-## 57. Same-Origin Policy kya hai?
+## <u> `57. Same-Origin Policy kya hai?` </u>
 
 - Browser security mechanism hai jo different origins ke resources ke access ko restrict karta hai.
 
-**`Origin generally:`**
+**Origin generally:**
 
 ```text
 Protocol + Domain + Port
 ```
 
-**`Example:`**
+**Example:**
 
 ```text
 https://example.com
@@ -1004,13 +1004,13 @@ http://example.com
 
 ---
 
-## 58. AJAX aur CORS ka relation kya hai?
+## <u> `58. AJAX aur CORS ka relation kya hai?` </u>
 - AJAX/fetch request cross-origin ho sakti hai, lekin browser CORS policy apply karta hai.
 - Server ko appropriate permission headers return karne padte hain.
 
 ---
 
-## 59. Preflight request kya hoti hai?
+## <u> `59. Preflight request kya hoti hai?` </u>
 
 - CORS mein kuch cross-origin requests ke liye browser pehle:
 
@@ -1024,9 +1024,9 @@ OPTIONS
 
 ---
 
-## 60. AJAX mein authentication kaise handle karenge?
+## <u> `60. AJAX mein authentication kaise handle karenge?` </u>
 
-**`Common methods:`**
+**Common methods:`**
 
 - Session/cookies
 - Token authentication
@@ -1034,7 +1034,7 @@ OPTIONS
 - OAuth
 - API keys depending on architecture
 
-**`Example bearer token:`**
+**Example bearer token:**
 
 ```javascript
 headers: {
@@ -1044,11 +1044,11 @@ headers: {
 
 ---
 
-## 61. AJAX mein session kaise work karta hai?
+## <u>`61. AJAX mein session kaise work karta hai?`</u>
 
 - Agar browser session cookie maintain kar raha hai, AJAX requests same session ke saath server tak ja sakti hain, subject to same-origin/CORS/cookie policies.
 
-**`PHP:`**
+**PHP:**
 
 ```php
 $_SESSION['user_id']
@@ -1058,11 +1058,11 @@ $_SESSION['user_id']
 
 ---
 
-## 62. AJAX mein SQL injection se kaise bachenge?
+## <u>`62. AJAX mein SQL injection se kaise bachenge?`</u>
 
 - AJAX hone se SQL injection automatically prevent nahi hota.
 
-**`Server side:`**
+**Server side:**
 
 1. Prepared statements
 1. Query builder
@@ -1075,11 +1075,11 @@ $_SESSION['user_id']
 
 ---
 
-## 63. AJAX mein XSS kya hai?
+## <u>` 63. AJAX mein XSS kya hai?`</u>
 - XSS = **Cross-Site Scripting**
 - Attacker malicious JavaScript inject karne ki koshish karta hai.
 
-**`Example:`**
+**Example:**
 
 ```javascript
 $("#result").html(userInput);
@@ -1090,7 +1090,7 @@ $("#result").html(userInput);
 
 ---
 
-## 64. `.html()` vs `.text()`?
+## <u>` 64. .html() vs .text() ?`</u>
 
 ```javascript
 $("#result").html(response);
@@ -1107,7 +1107,7 @@ $("#result").text(response);
 
 ---
 
-## 65. AJAX response ko HTML mein kaise insert karenge?
+## <u>` 65. AJAX response ko HTML mein kaise insert karenge?`</u>
 
 ```javascript
 success: function(response) {
@@ -1116,7 +1116,7 @@ success: function(response) {
 ```
 ---
 
-## 66. AJAX response ko JSON mein kaise process karenge?
+## <u>`66. AJAX response ko JSON mein kaise process karenge?`</u>
 
 ```javascript
 success: function(response) {
@@ -1128,7 +1128,7 @@ success: function(response) {
 }
 ```
 
-**`Example server response:`**
+**Example server response:**
 
 ```json
 {
@@ -1138,7 +1138,7 @@ success: function(response) {
 ```
 ---
 
-## 67. AJAX mein race condition kya hai?
+## <u>`67. AJAX mein race condition kya hai?`</u>
 
 - Suppose user rapidly type karta hai:
 
@@ -1152,7 +1152,7 @@ java
 - Multiple requests simultaneously ja sakti hain.
 - Ho sakta hai old request ka response latest request ke baad aaye aur UI mein outdated data show kar de.
 
-**`Isse avoid karne ke liye:`**
+**Isse avoid karne ke liye:**
 
 - Debouncing
 - Request cancellation
@@ -1163,11 +1163,11 @@ use kar sakte hain.
 
 ---
 
-## 68. Debouncing kya hai?
+## <u>`68. Debouncing kya hai?`</u>
 
 - Rapid events ke beech function ko immediately execute karne ke bajay wait karna. Search autocomplete ke liye useful.
 
-**`Example:`**
+**Example:**
 
 ```text
 User types:
@@ -1182,9 +1182,9 @@ Only one AJAX request
 ```
 ---
 
-## 69. AJAX autocomplete mein debounce kyun use karenge?
+## <u>` 69. AJAX autocomplete mein debounce kyun use karenge?`</u>
 
-**`Without debounce:`**
+**Without debounce:**
 
 ```text
 J → request
@@ -1195,7 +1195,7 @@ Java → request
 
 - Bahut requests ja sakti hain.
 
-**`Debounce se:`**
+**Debounce se:**
 
 ```text
 Java
@@ -1209,7 +1209,7 @@ One request
 
 ---
 
-## 70. AJAX request fail hone par kya karenge?
+## <u>` 70. AJAX request fail hone par kya karenge?`  </u>
 
 - User ko meaningful error show karenge:
 
@@ -1231,9 +1231,9 @@ error: function(xhr) {
 
 ---
 
-## 71. AJAX mein network error kaise debug karenge?
+## <u>` 71. AJAX mein network error kaise debug karenge?` </u>
 
-**`Browser DevTools:`**
+**Browser DevTools:**
 
 ```text
 F12
@@ -1253,11 +1253,11 @@ Timing
 
 ---
 
-## 72. AJAX request browser mein kaise check karenge?
+## <u> `72. AJAX request browser mein kaise check karenge?` </u>
 
 - Chrome DevTools → **Network tab**
 
-**`Then request select karke:`**
+**Then request select karke:**
 
 - Request URL
 - Method
@@ -1273,47 +1273,47 @@ check kar sakte hain.
 
 ---
 
-## 73. AJAX mein 200 status hai but error aa raha hai. Why?
+## <u>` 73. AJAX mein 200 status hai but error aa raha hai. Why? ` </u>
 
-**`Possible reasons:`**
+**Possible reasons:**
 
 - Response expected JSON nahi hai
 - Invalid JSON
 - PHP warning/notice response mein aa gaya
 - HTML error response aa gaya
-- Wrong `dataType`
+- Wrong **`dataType`**
 - JavaScript parsing error
 - Application-level error
 
-**`Example:`**
+**Example:**
 
 ```javascript
 dataType: "json"
 ```
 
-but server returns:
+**but server returns:**
 
 ```text
 Warning...
 {"status":true}
 ```
 
-To JSON parsing fail ho sakti hai.
+- To JSON parsing fail ho sakti hai.
 
 ---
 
-## 74. AJAX mein JSON parse error kyun aata hai?
+## <u> ` 74. AJAX mein JSON parse error kyun aata hai? ` </u>
 
-Server valid JSON nahi bhej raha.
+- Server valid JSON nahi bhej raha.
 
-**`Wrong:`**
+**Wrong:**
 
 ```text
 User saved
 {"status":true}
 ```
 
-**`Correct:`**
+**Correct:**
 
 ```json
 {
@@ -1321,7 +1321,7 @@ User saved
 }
 ```
 
-**`Server side:`**
+**Server side:**
 
 ```php
 header('Content-Type: application/json');
@@ -1330,9 +1330,9 @@ echo json_encode($data);
 
 ---
 
-## 75. AJAX request duplicate kyun ho sakti hai?
+## <u>`75. AJAX request duplicate kyun ho sakti hai?`</u>
 
-**`Common reasons:`**
+**Common reasons:**
 
 - Event handler multiple times bind hua
 - Button multiple times click hua
@@ -1342,15 +1342,15 @@ echo json_encode($data);
 
 ---
 
-## 76. Duplicate AJAX request ko kaise prevent karenge?
+## <u>`76. Duplicate AJAX request ko kaise prevent karenge?`</u>
 
-**`Button temporarily disable:`**
+**Button temporarily disable:**
 
 ```javascript
 $("#submitBtn").prop("disabled", true);
 ```
 
-**`Complete hone par:`**
+**Complete hone par:**
 
 ```javascript
 complete: function() {
@@ -1362,7 +1362,7 @@ complete: function() {
 
 ---
 
-## 77. AJAX mein button double click issue kaise solve karenge?
+## <u>`77. AJAX mein button double click issue kaise solve karenge?`</u>
 
 ```javascript
 $("#btn").click(function() {
@@ -1388,11 +1388,11 @@ $("#btn").click(function() {
 
 ---
 
-## 78. AJAX mein caching kya hai?
+## <u>`78. AJAX mein caching kya hai?`</u>
 - Browser/server previous GET response ko cache kar sakta hai.
 - Dynamic data ke cases mein unwanted stale response aa sakta hai.
 
-**`jQuery:`**
+**jQuery:**
 
 ```javascript
 cache: false
@@ -1402,9 +1402,9 @@ cache: false
 
 ---
 
-## 79. AJAX aur normal form submit mein difference?
+## <u>`79. AJAX aur normal form submit mein difference?`</u>
 
-**`Normal form`**
+**Normal form**
 
 ```text
 Submit
@@ -1414,7 +1414,7 @@ Request
 Full page reload
 ```
 
-**`AJAX`**
+**AJAX**
 
 ```text
 Submit
@@ -1428,12 +1428,12 @@ Required UI update
 
 ---
 
-## 80. AJAX aur API mein difference?
+## <u>`80. AJAX aur API mein difference?`</u>
 - **AJAX** client-side asynchronous HTTP communication ka technique/pattern hai.
 - **API** ek interface/endpoint hai jiske through applications communicate karti hain.
 - AJAX API ko call kar sakta hai.
 
-**`Example:`**
+**Example:**
 
 ```text
 Browser
@@ -1449,27 +1449,27 @@ Database
 
 ---
 
-## 81. AJAX aur REST API ka relation?
+## <u>`81. AJAX aur REST API ka relation?`</u>
 
 - REST API backend endpoints provide karti hai.
 - AJAX/fetch frontend se un endpoints ko call kar sakta hai.
 
-**`Example:`**
+**Example:**
 
 ```javascript
 fetch("/api/users")
 ```
 
-**`Yahan:`**
+**Yahan:**
 
-- `fetch` → client-side HTTP mechanism
-- `/api/users` → API endpoint
+- **`fetch`** → client-side HTTP mechanism
+- **`/api/users`** → API endpoint
 
 ---
 
-## 82. AJAX mein PUT aur PATCH kya hain?
+## <u>`82. AJAX mein PUT aur PATCH kya hain?`</u>
 
-**`REST APIs mein:`**
+**REST APIs mein:**
 
 ```text
 POST   → Create
@@ -1479,7 +1479,7 @@ PATCH  → Partial update
 DELETE → Delete
 ```
 
-**`Example:`**
+**Example:**
 
 ```javascript
 fetch("/api/users/10", {
@@ -1492,11 +1492,11 @@ fetch("/api/users/10", {
 
 ---
 
-## 83. AJAX mein Promise kya hai?
+## <u>`83. AJAX mein Promise kya hai?`</u>
 
 - Modern JavaScript APIs jaise **`fetch()`** Promise return karti hain.
 
-**`Example:`**
+**Example:**
 
 ```javascript
 fetch("users.php")
@@ -1511,7 +1511,7 @@ fetch("users.php")
 
 ---
 
-## 84. Async/Await se AJAX kaise karenge?
+## <u>`84. Async/Await se AJAX kaise karenge?`</u>
 
 ```javascript
 async function getUsers() {
@@ -1534,11 +1534,11 @@ async function getUsers() {
 
 ---
 
-## 85. jQuery AJAX mein Promise hota hai?
+## <u>`85. jQuery AJAX mein Promise hota hai?`</u>
 
 - jQuery ka **`$.ajax()` `jqXHR`** object return karta hai jo Promise-like interface provide karta hai.
 
-**`Example:`**
+**Example:**
 
 ```javascript
 $.ajax({
@@ -1554,9 +1554,9 @@ $.ajax({
 
 ---
 
-## 86. `success/error` vs `.done/.fail`?
+## <u>`86. success/error vs .done/.fail?`</u>
 
-**`Old/common style:`**
+**Old/common style:**
 
 ```javascript
 $.ajax({
@@ -1565,7 +1565,7 @@ $.ajax({
 });
 ```
 
-**`Promise-style:`**
+**Promise-style:**
 
 ```javascript
 $.ajax({
@@ -1579,11 +1579,11 @@ $.ajax({
 
 ---
 
-## 87. AJAX request mein credentials kya hain?
+## <u>`87. AJAX request mein credentials kya hain?`</u>
 
 - Cross-origin requests mein cookies/auth credentials ke behavior ko control karna pad sakta hai.
 
-**`Fetch:`**
+**Fetch:**
 
 ```javascript
 fetch(url, {
@@ -1595,11 +1595,11 @@ fetch(url, {
 
 ---
 
-## 88. CodeIgniter mein AJAX request kaise identify karenge?
+## <u>`88. CodeIgniter mein AJAX request kaise identify karenge?`</u>
 
 - CodeIgniter version ke according approach differ kar sakti hai.
 
-**`CI3 mein commonly:`**
+**CI3 mein commonly:**
 
 ```php
 if ($this->input->is_ajax_request()) {
@@ -1607,7 +1607,7 @@ if ($this->input->is_ajax_request()) {
 }
 ```
 
-**`Lekin important:`**
+**Lekin important:**
 
 - Security decision sirf AJAX check par based nahi hona chahiye, because request headers can be spoofed.
 
@@ -1615,16 +1615,16 @@ if ($this->input->is_ajax_request()) {
 
 ---
 
-## 89. CodeIgniter mein AJAX se data kaise receive karenge?
+## <u>`89. CodeIgniter mein AJAX se data kaise receive karenge?`</u>
 
-**`CI3:`**
+**CI3:**
 
 ```php
 $name = $this->input->post('name');
 $email = $this->input->post('email');
 ```
 
-**`AJAX:`**
+**AJAX:**
 
 ```javascript
 $.ajax({
@@ -1639,9 +1639,9 @@ $.ajax({
 
 ---
 
-## 90. CodeIgniter mein JSON response kaise denge?
+## <u>`90. CodeIgniter mein JSON response kaise denge?`</u>
 
-**`CI3 mein:`**
+**CI3 mein:**
 
 ```php
 $data = [
@@ -1656,9 +1656,9 @@ $this->output
 
 ---
 
-## 91. CodeIgniter AJAX CRUD architecture kya hogi?
+## <u>`91. CodeIgniter AJAX CRUD architecture kya hogi?`</u>
 
-**`A typical CI3 project:`**
+**A typical CI3 project:**
 
 ```text
 View
@@ -1684,16 +1684,16 @@ DOM Update
 
 ---
 
-## 92. AJAX security ke liye kya-kya karna chahiye?
+## <u>`92. AJAX security ke liye kya-kya karna chahiye?`</u>
 - AJAX request ko secure karne ke liye HTTPS, authentication, authorization, CSRF protection, server-side validation, output encoding, SQL injection protection aur proper CORS configuration use karni chahiye.
 
 ---
 
-## 93. AJAX request ko sirf AJAX hone par allow karna secure hai?
+## <u>`93. AJAX request ko sirf AJAX hone par allow karna secure hai?`</u>
 
 **No.**
 
-**`Example:`**
+**Example:**
 
 ```php
 $this->input->is_ajax_request()
@@ -1702,7 +1702,7 @@ $this->input->is_ajax_request()
 - sirf request type identify karne ke liye useful ho sakta hai.
 - But attacker request ko manually create kar sakta hai.
 
-**``Security ke liye:``**
+**Security ke liye:**
 
 ```text
 Authentication
@@ -1716,11 +1716,11 @@ etc. important hain.
 
 ---
 
-## 94. AJAX mein validation client-side ya server-side?
+## <u>`94. AJAX mein validation client-side ya server-side?`</u>
 
 **Both.**
 
-**`Client-side:`**
+**Client-side:**
 
 ```javascript
 if (name === "") {
@@ -1730,7 +1730,7 @@ if (name === "") {
 
 User experience ke liye.
 
-**`Server-side:`**
+**Server-side:**
 
 ```php
 $this->form_validation->set_rules(
@@ -1746,7 +1746,7 @@ $this->form_validation->set_rules(
 
 ---
 
-## 95. AJAX request mein sensitive data kaise protect karenge?
+## <u>`95. AJAX request mein sensitive data kaise protect karenge?`</u>
 
 - HTTPS
 - Never put passwords/secrets in URLs
@@ -1759,13 +1759,13 @@ $this->form_validation->set_rules(
 
 ---
 
-## 96. AJAX mein rate limiting kya hai?
+## 96. <u>`AJAX mein rate limiting kya hai?`</u>
 
 - Agar user repeatedly API/AJAX endpoint hit kare, server resources consume ho sakte hain.
 
 - Rate limiting request frequency limit karti hai.
 
-**`Example concept:`**
+**Example concept:**
 
 ```text
 100 requests / minute
@@ -1775,17 +1775,17 @@ $this->form_validation->set_rules(
 
 ---
 
-## 97. AJAX mein HTTP 429 kya hai?
+## <u>`97. AJAX mein HTTP 429 kya hai?`</u>
 
-**`429 = Too Many Requests`**
+**429 = Too Many Requests**
 
 - Usually rate limiting ke context mein use hota hai.
 
 ---
 
-## 98. AJAX request slow ho to kya karenge?
+## <u>`98. AJAX request slow ho to kya karenge?`</u>
 
-**`Interview answer:`**
+**Interview answer:**
 
 1. Network request inspect karungi
 2. Backend response time check karungi
@@ -1800,9 +1800,9 @@ $this->form_validation->set_rules(
 
 ---
 
-## 99. AJAX performance kaise improve karenge?
+## <u>`99. AJAX performance kaise improve karenge?`</u>
 
-**`Important points:`**
+**Important points:**
 
 ```text
 Debouncing
@@ -1816,40 +1816,3 @@ Batch requests
 Avoid duplicate requests
 Compression
 ```
-
----
-
-## 100. Interview mein AJAX ka real project example kaise explain karein?
-
-**`Aap ye answer bol sakti hain:`**
-
-- "Maine AJAX ka use CRUD operations mein kiya hai. For example, user management module mein add, edit, delete aur listing AJAX requests se handle ki. Form submit par **`preventDefault()`** use karke page reload prevent kiya, form data AJAX ke through controller ko send kiya, backend mein validation aur database operation perform hua aur JSON response return hua. Success response ke basis par table ko dynamically update kiya aur error cases ke liye proper error handling aur loader use kiya."
-
-- Ye **real interview answer** hai aur PHP/CodeIgniter profile ke liye relevant hai.
-
----
-
-# 🔥 20 Most Important AJAX Questions — Must Prepare
-
-- Agar interviewer ke paas time kam ho, **ye 20 definitely prepare karo:**
-
-1. AJAX kya hai?
-2. AJAX kaise work karta hai?
-3. Asynchronous ka meaning?
-4. XMLHttpRequest kya hai?
-5. **`$.ajax()`** kya hai?
-6. **`$.get()`** vs **`$.post()`** ?
-7. GET vs POST?
-8. **`dataType`** vs **`contentType`**?
-9. **`success`, `error`, `complete`**?
-10. **`beforeSend`**?
-11. AJAX form submit?
-12. **`preventDefault()`**?
-13. **`serialize()`**?
-14. FormData?
-15. AJAX file upload?
-16. JSON response?
-17. AJAX CRUD?
-18. CORS?
-19. CSRF?
-20. AJAX debugging using Network tab?

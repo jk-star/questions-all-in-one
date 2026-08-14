@@ -961,24 +961,24 @@ External subscribed state change
 | Component?               | Reusable UI unit            |
 | Props?                   | Parent → Child data         |
 | State?                   | Component's dynamic state   |
-| Hook for state?          | `useState`                  |
-| Side effects/sync?       | `useEffect`                 |
-| DOM reference?           | `useRef`                    |
-| Shared context?          | Context + `useContext`      |
-| List render?             | `map()`                     |
-| List identification?     | `key`                       |
-| Conditional UI?          | `if`, ternary, `&&`         |
-| API?                     | `fetch` etc.                |
-| Form reload stop?        | `preventDefault()`          |
-| Navigation?              | `useNavigate()`             |
-| URL params?              | `useParams()`               |
-| Value memoization?       | `useMemo()`                 |
-| Function memoization?    | `useCallback()`             |
-| Component memoization?   | `memo()`                    |
+| Hook for state?          | **`useState`**                  |
+| Side effects/sync?       | **`useEffect`**                 |
+| DOM reference?           | **`useRef`**                    |
+| Shared context?          | Context + **`useContext`**      |
+| List render?             | **`map()`**                    |
+| List identification?     | **`key` **                      |
+| Conditional UI?          | **`if`**, ternary, **`&&`**         |
+| API?                     | **`fetch`** etc.                |
+| Form reload stop?        | **`preventDefault()`**          |
+| Navigation?              | **`useNavigate()`**             |
+| URL params?              | **`useParams()`**               |
+| Value memoization?       | **`useMemo()`**                 |
+| Function memoization?    | **`useCallback()`**             |
+| Component memoization?   | **`memo()`**                    |
 | Reusable stateful logic? | Custom Hook                 |
 | Parent → child?          | Props                       |
 | Child → parent?          | Callback prop               |
 | Global-ish shared data?  | Context                     |
 | Array add?               | Spread                      |
-| Array delete?            | `filter()`                  |
-| Array update?            | `map()`                     |
+| Array delete?            | **`filter()`**                  |
+| Array update?            | **`map()`**                     |
