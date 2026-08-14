@@ -996,12 +996,507 @@ $("#box")
     .addClass("active")
     .slideDown()
     .text("Hello");
-noConflict
 
-**85. $.noConflict() kya hai?**
+</pre></code>
+
+## noConflict
+
+**85. `$.noConflict()` kya hai?**
 
 - Agar $ kisi aur library ke saath conflict kare:
 
+<code><pre>
 const jq = $.noConflict();
 
 jq("#box").hide();
+</pre></code>
+
+**86. `.filter()` kya karta hai?**
+
+- Selected elements mein se condition ke according elements filter karta hai.
+
+```js
+$(".item").filter(".active");
+```
+
+- Sirf **`.active`** wale elements milenge.
+
+**87. `.not()` kya karta hai?**
+
+- Specified elements ko exclude karta hai.
+
+```js
+$("li").not(".active");
+```
+
+- **`.active`** ko chhodkar baaki `li` select honge.
+
+**88. `.is()` kya karta hai?**
+
+- Check karta hai ki selected element given condition ko match karta hai ya nahi.
+
+```js
+if ($("#box").is(".active")) {
+    console.log("Active");
+}
+```
+
+- Return value: **`true` / `false`**.
+
+**89. `.first()` aur `:first` mein kya difference hai?**
+
+```js
+$("li:first");
+```
+
+- jQuery selector hai.
+
+```js
+$("li").first();
+```
+
+- jQuery method hai.
+
+- Dono first matching element ko target kar sakte hain, lekin `.first()` traversal/filtering ke context mein useful hota hai.
+
+**90. `.last()` kya karta hai?**
+
+- Collection ka last element return karta hai.
+
+```js
+$(".item").last();
+```
+
+**91. `.eq()` kya karta hai?**
+
+- Specific index ka element select karta hai.
+
+```js
+$("li").eq(2);
+```
+
+- Ye third **`li`** ko select karega because index **`0`** se start hota hai.
+
+**92. `.slice()` kya karta hai?**
+
+- Collection ka ek portion select karta hai.
+
+```js
+$("li").slice(1, 4);
+```
+
+- Index **`1`** se **`3`** tak elements select honge.
+
+**93. `.map()` kya karta hai?**
+
+- jQuery collection ke elements ko transform karke new values ki collection banane ke liye use hota hai.
+
+```js
+let names = $(".user").map(function() {
+    return $(this).text();
+}).get();
+
+console.log(names);
+```
+
+**94. `.get()` kya karta hai?**
+
+- jQuery object ko normal JavaScript array/DOM element mein convert/access karne ke liye use hota hai.
+
+```js
+let items = $(".item").get();
+```
+
+**Specific index:**
+
+```js
+let item = $(".item").get(0);
+```
+
+**95. `.toArray()` kya karta hai?**
+
+- jQuery collection ko JavaScript array mein convert karta hai.
+
+```js
+let items = $(".item").toArray();
+```
+**96. `.clone()` kya karta hai?**
+
+- Element ki copy create karta hai.
+
+```js
+let copy = $("#box").clone();
+
+$("#container").append(copy);
+```
+
+- Events/data ko clone karne ke liye:
+
+```js
+$("#box").clone(true);
+```
+
+**97. `.replaceWith()` kya karta hai?**
+
+- Selected element ko naye content se replace karta hai.
+
+```js
+$("#old").replaceWith("<div>New Content</div>");
+```
+
+**98. `.wrap()` kya karta hai?**
+
+- Element ko kisi wrapper ke andar wrap karta hai.
+
+```js
+$("p").wrap("<div class='wrapper'></div>");
+```
+
+**99. `.wrapAll()` kya karta hai?**
+
+- Multiple selected elements ko ek single wrapper ke andar wrap karta hai.
+
+```js
+$("p").wrapAll("<div class='wrapper'></div>");
+```
+
+**100. `.unwrap()` kya karta hai?**
+
+- Parent wrapper ko remove karta hai, lekin selected element ko rakhta hai.
+
+```js
+$("p").unwrap();
+```
+
+## Events — Advanced
+
+**101. Event namespace kya hai?**
+
+- Events ko logically group/identify karne ke liye namespace use kar sakte hain.
+
+```js
+$("#btn").on("click.myEvent", function() {
+    console.log("Clicked");
+});
+```
+
+**Remove:**
+
+```js
+$("#btn").off("click.myEvent");
+```
+
+**102. `.off()` kya karta hai?**
+
+- Previously attached event handler ko remove karta hai.
+
+```js
+$("#btn").off("click");
+```
+
+**Specific handler:**
+
+```js
+function handleClick() {
+    console.log("Clicked");
+}
+
+$("#btn").on("click", handleClick);
+
+$("#btn").off("click", handleClick);
+```
+
+**103. `.one()` kya karta hai?**
+
+- Event ko **sirf ek baar** execute karta hai.
+
+```js
+$("#btn").one("click", function() {
+    alert("Only once");
+});
+```
+
+- Button ko kitni bhi baar click karo, handler ek hi baar execute hoga.
+
+**104. `.trigger()` kya karta hai?**
+
+- Programmatically event trigger karta hai.
+
+```js
+$("#btn").trigger("click");
+```
+
+- Isse click handler execute ho sakta hai.
+
+---
+
+**105. `.triggerHandler()` kya hai?**
+
+- Ye element par handler trigger karta hai, lekin normal `.trigger()` ki tarah event bubbling nahi karta.
+
+```js
+$("#btn").triggerHandler("click");
+```
+
+---
+
+**106. `.bind()` kya hai?**
+
+- Old jQuery API mein event attach karne ke liye use hota tha.
+
+```js
+$("#btn").bind("click", function() {
+});
+```
+
+**Modern code mein `on()` use karna chahiye.**
+
+---
+
+**107. `.unbind()` kya hai?**
+
+- Old API mein events remove karne ke liye use hota tha.
+
+```js
+$("#btn").unbind("click");
+```
+
+**Modern alternative:**
+
+```js
+$("#btn").off("click");
+```
+
+**108. `.live()` kya tha?**
+
+- Old jQuery mein dynamically created elements ke events handle karne ke liye use hota tha.
+
+```js
+$(".btn").live("click", function() {});
+```
+
+**Deprecated/removed.**
+
+**Modern approach:**
+
+```js
+$(document).on("click", ".btn", function() {});
+```
+
+---
+
+**109. `.delegate()` kya tha?**
+
+- Old event delegation API tha.
+
+```js
+$("#container").delegate(".btn", "click", function() {});
+```
+
+**Modern approach:**
+
+```js
+$("#container").on("click", ".btn", function() {});
+```
+
+## AJAX — Advanced
+
+**110. AJAX mein `beforeSend()` kya karta hai?**
+
+- Request send hone se **pehle** execute hota hai.
+
+```js
+$.ajax({
+    url: "/users",
+    beforeSend: function() {
+        $("#loader").show();
+    },
+    success: function(response) {
+        console.log(response);
+    }
+});
+```
+
+**111. AJAX mein `complete()` kya karta hai?**
+
+- Request complete hone ke baad execute hota hai, chahe success ho ya error.
+
+```js
+$.ajax({
+    url: "/users",
+
+    complete: function() {
+        $("#loader").hide();
+    }
+});
+```
+
+**112. `success`, `error` aur `complete` mein difference?**
+
+| Callback | Kab execute hota hai |
+|---|---|
+| **`beforeSend`** | Request se pehle |
+| **`success`** | Successful response par |
+| **`error`** | Request fail hone par |
+| **`complete`** | Request complete hone ke baad |
+
+### 113. AJAX request cancel kaise karenge?
+
+- **`$.ajax()`** ek **`jqXHR`** object return karta hai.
+
+```js
+let request = $.ajax({
+    url: "/users"
+});
+```
+
+**Cancel:**
+
+```js
+request.abort();
+```
+
+**114. `$.ajax()` kya return karta hai?**
+
+- Ye **jqXHR object** return karta hai, jo XMLHttpRequest functionality ke saath jQuery Deferred/Promise-like methods provide karta hai.
+
+```js
+let request = $.ajax({
+    url: "/users"
+});
+```
+
+**115. AJAX success ko `.done()` se kaise handle karenge?**
+
+```js
+$.ajax({
+    url: "/users"
+})
+.done(function(response) {
+    console.log(response);
+})
+.fail(function(error) {
+    console.log(error);
+})
+.always(function() {
+    console.log("Completed");
+});
+```
+
+- Ye modern jQuery code mein kaafi useful pattern hai.
+
+**116. `.done()`, `.fail()`, `.always()` kya hain?**
+
+**`.done()`**
+
+- Successful completion ke liye.
+
+```js
+request.done(function(response) {
+    console.log(response);
+});
+```
+
+**`.fail()`**
+
+- Failure ke liye.
+
+```js
+request.fail(function(error) {
+    console.log(error);
+});
+```
+
+**`.always()`**
+
+- Success ya failure dono ke baad.
+
+```js
+request.always(function() {
+    console.log("Finished");
+});
+```
+
+**117. jQuery Deferred kya hai?**
+
+- Deferred asynchronous operation ki state aur callbacks ko manage karne ke liye jQuery ka mechanism hai.
+
+**Example:**
+
+```js
+let deferred = $.Deferred();
+
+deferred.done(function(value) {
+    console.log(value);
+});
+
+deferred.resolve("Success");
+```
+
+**118. AJAX mein timeout kaise set karenge?**
+
+```js
+$.ajax({
+    url: "/users",
+    timeout: 5000,
+
+    success: function(response) {
+        console.log(response);
+    },
+
+    error: function(xhr, status) {
+        console.log(status);
+    }
+});
+```
+
+`5000` milliseconds = **5 seconds**.
+
+**119. AJAX request mein headers kaise send karenge?**
+
+```js
+$.ajax({
+    url: "/users",
+    type: "POST",
+
+    headers: {
+        "Authorization": "Bearer token"
+    },
+
+    success: function(response) {
+        console.log(response);
+    }
+});
+```
+
+**120. JSON data POST karna ho to `contentType` kaise use karenge?**
+
+```js
+$.ajax({
+    url: "/users",
+    type: "POST",
+
+    contentType: "application/json",
+
+    data: JSON.stringify({
+        name: "Jyoti",
+        email: "test@example.com"
+    }),
+
+    success: function(response) {
+        console.log(response);
+    }
+});
+```
+
+## Interview mein yaad rakho
+
+```text
+contentType
+     ↓
+Request mein hum kya bhej rahe hain?
+
+dataType
+     ↓
+Server se hum kya receive/expect kar rahe hain?
+```
