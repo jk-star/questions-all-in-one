@@ -1,17 +1,8 @@
-# Tailwind CSS Interview Questions & Answers --- Hinglish
+# <u>`Tailwind CSS Interview Questions & Answers`</u>
+## <u>`1. Tailwind CSS Basic Interview Questions`</u>
 
-Complete Tailwind CSS interview preparation guide, beginner se advanced
-level tak.
-
-------------------------------------------------------------------------
-
-# 1. Tailwind CSS Basic Interview Questions
-
-## Q1. Tailwind CSS kya hai?
-
-**Answer:**
-
-Tailwind CSS ek **utility-first CSS framework** hai jisme hum predefined
+**Q1. Tailwind CSS kya hai?**
+- Tailwind CSS ek **utility-first CSS framework** hai jisme hum predefined
 utility classes use karke UI design karte hain.
 
 ``` html
@@ -20,28 +11,26 @@ utility classes use karke UI design karte hain.
 </button>
 ```
 
-Yahan:
+**Yahan:**
 
--   `bg-blue-500` → background color
--   `text-white` → text color
--   `px-4` → horizontal padding
--   `py-2` → vertical padding
--   `rounded` → border radius
+-   **`bg-blue-500`** → background color
+-   **`text-white`** → text color
+-   **`px-4`** → horizontal padding
+-   **`py-2`** → vertical padding
+-   **`rounded`** → border radius
 
 ------------------------------------------------------------------------
 
-## Q2. Tailwind ko "utility-first" kyun kaha jata hai?
+**Q2. Tailwind ko "utility-first" kyun kaha jata hai?**
 
-**Answer:**
-
-Kyuki Tailwind mein small utility classes hoti hain jo ek specific CSS
+- Kyuki Tailwind mein small utility classes hoti hain jo ek specific CSS
 property handle karti hain.
 
 ``` html
 <div class="flex items-center justify-between p-4">
 ```
 
-Meaning:
+**Meaning:**
 
 ``` text
 flex              → display: flex
@@ -52,25 +41,19 @@ p-4               → padding
 
 ------------------------------------------------------------------------
 
-## Q3. Tailwind CSS aur Bootstrap mein kya difference hai?
+**Q3. Tailwind CSS aur Bootstrap mein kya difference hai?**
 
-  -----------------------------------------------------------------------
-  Tailwind CSS                        Bootstrap
-  ----------------------------------- -----------------------------------
-  Utility-first                       Component-based
+  
+  | Tailwind                              | Bootstrap                  |
+| ------------------------------------- | -------------------------- |
+| Utility-first                         | Component-based            |
+| Highly customizable                   | Opinionated default design |
+| Small utility classes                 | Ready-made components      |
+| Custom UI banana easy                 | Fast prototyping easy      |
+| HTML mein classes zyada ho sakti hain | HTML comparatively cleaner |
 
-  Highly customizable                 Opinionated default design
 
-  Custom UI banana easy               Ready-made components
-
-  Utility classes zyada use hoti hain Component classes zyada use hoti
-                                      hain
-
-  Modern custom designs ke liye       Fast prototyping ke liye useful
-  useful                              
-  -----------------------------------------------------------------------
-
-Tailwind:
+**Tailwind:**
 
 ``` html
 <button class="bg-blue-600 text-white px-4 py-2 rounded">
@@ -78,7 +61,7 @@ Tailwind:
 </button>
 ```
 
-Bootstrap:
+**Bootstrap:**
 
 ``` html
 <button class="btn btn-primary">
@@ -88,11 +71,9 @@ Bootstrap:
 
 ------------------------------------------------------------------------
 
-## Q4. Tailwind CSS use karne ke advantages kya hain?
+**Q4. Tailwind CSS use karne ke advantages kya hain?**
 
-**Answer:**
-
-Main advantages:
+**Main advantages:**
 
 -   Fast development
 -   Responsive design easy
@@ -105,9 +86,9 @@ Main advantages:
 
 ------------------------------------------------------------------------
 
-## Q5. Tailwind mein `p-4` kya karta hai?
+**Q5. Tailwind mein `p-4` kya karta hai?**
 
-`p-4` ka matlab padding apply karna hai.
+- **`p-4`** ka matlab padding apply karna hai.
 
 ``` html
 <div class="p-4">
@@ -115,7 +96,7 @@ Main advantages:
 </div>
 ```
 
-Common spacing examples:
+**Common spacing examples:**
 
 ``` text
 p-1 → 0.25rem
@@ -127,10 +108,10 @@ p-8 → 2rem
 
 ------------------------------------------------------------------------
 
-## Q6. `m-4` aur `p-4` mein kya difference hai?
+**Q6. `m-4` aur `p-4` mein kya difference hai?**
 
-`m` = margin\
-`p` = padding
+**`m`** = margin\
+**`p`** = padding
 
 ``` html
 <div class="m-4 p-4">
@@ -138,12 +119,12 @@ p-8 → 2rem
 </div>
 ```
 
--   `m-4` → element ke bahar space
--   `p-4` → element ke andar space
+-   **`m-4`** → element ke bahar space
+-   **`p-4`** → element ke andar space
 
 ------------------------------------------------------------------------
 
-## Q7. Tailwind mein text color kaise set karte hain?
+**Q7. Tailwind mein text color kaise set karte hain?**
 
 ``` html
 <p class="text-red-500">
@@ -151,7 +132,7 @@ p-8 → 2rem
 </p>
 ```
 
-Examples:
+**Examples:**
 
 ``` text
 text-red-500
@@ -164,7 +145,7 @@ text-black
 
 ------------------------------------------------------------------------
 
-## Q8. Background color kaise set karenge?
+**Q8. Background color kaise set karenge?**
 
 ``` html
 <div class="bg-blue-500">
@@ -172,7 +153,7 @@ text-black
 </div>
 ```
 
-Examples:
+**Examples:**
 
 ``` text
 bg-red-500
@@ -185,7 +166,7 @@ bg-white
 
 ------------------------------------------------------------------------
 
-## Q9. Tailwind mein font size kaise change karte hain?
+**Q9. Tailwind mein font size kaise change karte hain?**
 
 ``` html
 <h1 class="text-3xl">
@@ -193,7 +174,7 @@ bg-white
 </h1>
 ```
 
-Common classes:
+**Common classes:**
 
 ``` text
 text-xs
@@ -209,7 +190,7 @@ text-5xl
 
 ------------------------------------------------------------------------
 
-## Q10. Font weight kaise set karenge?
+**Q10. Font weight kaise set karenge?**
 
 ``` html
 <p class="font-bold">
@@ -217,7 +198,7 @@ text-5xl
 </p>
 ```
 
-Common values:
+**Common values:**
 
 ``` text
 font-thin
@@ -232,11 +213,12 @@ font-black
 
 ------------------------------------------------------------------------
 
-# 2. Tailwind Core Concepts
+## <u>`2. Tailwind Core Concepts`</u>
 
-## Q11. Tailwind mein class composition kya hai?
+**Q11. Tailwind mein class composition kya hai?**
 
-Multiple utility classes ko combine karke ek complete design banana
+- Multiple utility classes ko combine karke ek complete design banana
+
 **class composition** hai.
 
 ``` html
@@ -247,13 +229,13 @@ Multiple utility classes ko combine karke ek complete design banana
 
 ------------------------------------------------------------------------
 
-## Q12. `flex` class kya karti hai?
+**Q12. `flex` class kya karti hai?**
 
 ``` html
 <div class="flex">
 ```
 
-Equivalent CSS:
+**Equivalent CSS:**
 
 ``` css
 display: flex;
@@ -261,15 +243,15 @@ display: flex;
 
 ------------------------------------------------------------------------
 
-## Q13. `items-center` kya karta hai?
+**Q13. `items-center` kya karta hai?**
 
-Equivalent CSS:
+**Equivalent CSS:**
 
 ``` css
 align-items: center;
 ```
 
-Example:
+**Example:**
 
 ``` html
 <div class="flex items-center">
@@ -277,15 +259,15 @@ Example:
 
 ------------------------------------------------------------------------
 
-## Q14. `justify-center` kya karta hai?
+**Q14. `justify-center` kya karta hai?**
 
-Equivalent CSS:
+**Equivalent CSS:**
 
 ``` css
 justify-content: center;
 ```
 
-Example:
+**Example:**
 
 ``` html
 <div class="flex justify-center">
@@ -293,7 +275,7 @@ Example:
 
 ------------------------------------------------------------------------
 
-## Q15. Element ko horizontally aur vertically center kaise karenge?
+**Q15. Element ko horizontally aur vertically center kaise karenge?**
 
 ``` html
 <div class="flex items-center justify-center">
@@ -301,13 +283,13 @@ Example:
 </div>
 ```
 
-Ye interview ka very common question hai.
+- Ye interview ka very common question hai.
 
 ------------------------------------------------------------------------
 
-## Q16. `space-x-4` kya hai?
+**Q16. `space-x-4` kya hai?**
 
-Flex children ke beech horizontal spacing create karta hai.
+- Flex children ke beech horizontal spacing create karta hai.
 
 ``` html
 <div class="flex space-x-4">
@@ -319,9 +301,9 @@ Flex children ke beech horizontal spacing create karta hai.
 
 ------------------------------------------------------------------------
 
-## Q17. `space-y-4` kya hai?
+**Q17. `space-y-4` kya hai?**
 
-Vertical spacing ke liye:
+- Vertical spacing ke liye:
 
 ``` html
 <div class="space-y-4">
@@ -329,15 +311,15 @@ Vertical spacing ke liye:
 
 ------------------------------------------------------------------------
 
-## Q18. `gap-4` kya karta hai?
+**Q18. `gap-4` kya karta hai?**
 
-Flex/Grid children ke beech gap:
+- Flex/Grid children ke beech gap:
 
 ``` html
 <div class="grid gap-4">
 ```
 
-Difference:
+**Difference:**
 
 ``` text
 gap-4      → flex/grid gap
@@ -347,15 +329,15 @@ space-y-4  → vertical child spacing
 
 ------------------------------------------------------------------------
 
-## Q19. `rounded` kya karta hai?
+**Q19. `rounded` kya karta hai?**
 
-Border radius apply karta hai.
+- Border radius apply karta hai.
 
 ``` html
 <div class="rounded">
 ```
 
-Options:
+**Options:**
 
 ``` text
 rounded-sm
@@ -369,22 +351,22 @@ rounded-full
 
 ------------------------------------------------------------------------
 
-## Q20. Circle kaise banayenge?
+**Q20. Circle kaise banayenge?**
 
 ``` html
 <div class="w-20 h-20 rounded-full">
 </div>
 ```
 
-`rounded-full` element ko fully rounded karta hai.
+- **`rounded-full`** element ko fully rounded karta hai.
 
 ------------------------------------------------------------------------
 
-# 3. Responsive Design
+## <u>`3. Responsive Design`</u>
 
-## Q21. Tailwind responsive design kaise work karta hai?
+**Q21. Tailwind responsive design kaise work karta hai?**
 
-Tailwind **mobile-first approach** follow karta hai.
+- Tailwind **mobile-first approach** follow karta hai.
 
 ``` html
 <div class="text-sm md:text-lg lg:text-2xl">
@@ -392,7 +374,7 @@ Tailwind **mobile-first approach** follow karta hai.
 </div>
 ```
 
-Meaning:
+**Meaning:**
 
 ``` text
 Mobile → text-sm
@@ -402,9 +384,9 @@ lg     → text-2xl
 
 ------------------------------------------------------------------------
 
-## Q22. Tailwind ke default breakpoints kya hain?
+**Q22. Tailwind ke default breakpoints kya hain?**
 
-Common Tailwind breakpoints:
+**Common Tailwind breakpoints:**
 
 ``` text
 sm
@@ -414,7 +396,7 @@ xl
 2xl
 ```
 
-Typical default values:
+**Typical default values:**
 
 ``` text
 sm  → 640px
@@ -426,16 +408,16 @@ xl  → 1280px
 
 ------------------------------------------------------------------------
 
-## Q23. Mobile-first approach kya hota hai?
+**Q23. Mobile-first approach kya hota hai?**
 
-Pehle mobile ke liye styling likhte hain, phir larger screens ke liye
+- Pehle mobile ke liye styling likhte hain, phir larger screens ke liye
 responsive prefixes use karte hain.
 
 ``` html
 <div class="text-center md:text-left">
 ```
 
-Meaning:
+**Meaning:**
 
 ``` text
 Mobile → center
@@ -444,7 +426,7 @@ md+    → left
 
 ------------------------------------------------------------------------
 
-## Q24. Mobile mein 1 column aur desktop mein 3 columns kaise banayenge?
+**Q24. Mobile mein 1 column aur desktop mein 3 columns kaise banayenge?**
 
 ``` html
 <div class="grid grid-cols-1 md:grid-cols-3">
@@ -452,13 +434,13 @@ md+    → left
 
 ------------------------------------------------------------------------
 
-## Q25. Mobile mein hidden aur desktop mein visible kaise karenge?
+**Q25. Mobile mein hidden aur desktop mein visible kaise karenge?**
 
 ``` html
 <div class="hidden md:block">
 ```
 
-Meaning:
+**Meaning:**
 
 ``` text
 Mobile → hidden
@@ -467,21 +449,21 @@ md+    → block
 
 ------------------------------------------------------------------------
 
-# 4. Flexbox & Grid
+## <u>`4. Flexbox & Grid`</u>
 
-## Q26. Tailwind mein flex direction kaise change karenge?
+**Q26. Tailwind mein flex direction kaise change karenge?**
 
 ``` html
 <div class="flex flex-col">
 ```
 
-Equivalent:
+**Equivalent:**
 
 ``` css
 flex-direction: column;
 ```
 
-Responsive:
+**Responsive:**
 
 ``` html
 <div class="flex flex-col md:flex-row">
@@ -489,13 +471,13 @@ Responsive:
 
 ------------------------------------------------------------------------
 
-## Q27. `flex-wrap` kaise lagayenge?
+**Q27. `flex-wrap` kaise lagayenge?**
 
 ``` html
 <div class="flex flex-wrap">
 ```
 
-Equivalent:
+**Equivalent:**
 
 ``` css
 flex-wrap: wrap;
@@ -503,23 +485,23 @@ flex-wrap: wrap;
 
 ------------------------------------------------------------------------
 
-## Q28. `grid-cols-3` kya karta hai?
+**Q28. `grid-cols-3` kya karta hai?**
 
 ``` html
 <div class="grid grid-cols-3">
 ```
 
-3 equal grid columns create karega.
+- 3 equal grid columns create karega.
 
 ------------------------------------------------------------------------
 
-## Q29. Grid responsive kaise banayenge?
+**Q29. Grid responsive kaise banayenge?**
 
 ``` html
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
 ```
 
-Meaning:
+**Meaning:**
 
 ``` text
 Mobile → 1
@@ -529,13 +511,13 @@ lg     → 4
 
 ------------------------------------------------------------------------
 
-## Q30. Tailwind mein width kaise set karte hain?
+**Q30. Tailwind mein width kaise set karte hain?**
 
 ``` html
 <div class="w-1/2">
 ```
 
-Common:
+**Common:**
 
 ``` text
 w-full
@@ -549,13 +531,13 @@ w-96
 
 ------------------------------------------------------------------------
 
-## Q31. Height kaise set karenge?
+**Q31. Height kaise set karenge?**
 
 ``` html
 <div class="h-64">
 ```
 
-Common:
+**Common:**
 
 ``` text
 h-full
@@ -567,9 +549,9 @@ min-h-screen
 
 ------------------------------------------------------------------------
 
-# 5. Hover, Focus & States
+## <u>`5. Hover, Focus & States`</u>
 
-## Q32. Hover effect kaise lagate hain?
+**Q32. Hover effect kaise lagate hain?**
 
 ``` html
 <button class="bg-blue-500 hover:bg-blue-700">
@@ -577,11 +559,11 @@ min-h-screen
 </button>
 ```
 
-`hover:` ek state variant hai.
+- **`hover:`** ek state variant hai.
 
 ------------------------------------------------------------------------
 
-## Q33. Hover par text color change kaise karenge?
+**Q33. Hover par text color change kaise karenge?**
 
 ``` html
 <a class="text-gray-600 hover:text-blue-600">
@@ -591,9 +573,9 @@ min-h-screen
 
 ------------------------------------------------------------------------
 
-## Q34. Focus state kya hai?
+**Q34. Focus state kya hai?**
 
-Input focus hone par styling:
+- Input focus hone par styling:
 
 ``` html
 <input class="border focus:border-blue-500">
@@ -601,7 +583,7 @@ Input focus hone par styling:
 
 ------------------------------------------------------------------------
 
-## Q35. Disabled button kaise style karenge?
+**Q35. Disabled button kaise style karenge?**
 
 ``` html
 <button class="disabled:opacity-50 disabled:cursor-not-allowed">
@@ -611,9 +593,9 @@ Input focus hone par styling:
 
 ------------------------------------------------------------------------
 
-## Q36. Group hover kya hai?
+**Q36. Group hover kya hai?**
 
-Parent ke hover hone par child ko style karna.
+- Parent ke hover hone par child ko style karna.
 
 ``` html
 <div class="group">
@@ -625,9 +607,9 @@ Parent ke hover hone par child ko style karna.
 
 ------------------------------------------------------------------------
 
-# 6. Dark Mode
+## <u>`6. Dark Mode`</u>
 
-## Q37. Tailwind mein dark mode kaise implement karte hain?
+**Q37. Tailwind mein dark mode kaise implement karte hain?**
 
 ``` html
 <div class="bg-white text-black dark:bg-gray-900 dark:text-white">
@@ -635,11 +617,11 @@ Parent ke hover hone par child ko style karna.
 </div>
 ```
 
-`dark:` variant dark mode styling ke liye use hota hai.
+- **`dark:`** variant dark mode styling ke liye use hota hai.
 
 ------------------------------------------------------------------------
 
-## Q38. Dark mode ka practical example?
+**Q38. Dark mode ka practical example?**
 
 ``` html
 <div class="min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
@@ -651,14 +633,14 @@ Parent ke hover hone par child ko style karna.
 
 ------------------------------------------------------------------------
 
-# 7. Tailwind Customization
+## <u>`7. Tailwind Customization`</u>
 
-## Q39. Tailwind ko customize kaise karte hain?
+**Q39. Tailwind ko customize kaise karte hain?**
 
-Tailwind project configuration/theme ke through colors, fonts, spacing,
+- Tailwind project configuration/theme ke through colors, fonts, spacing,
 breakpoints etc. customize kiye ja sakte hain.
 
-Conceptual example:
+**Conceptual example:**
 
 ``` js
 theme: {
@@ -670,7 +652,7 @@ theme: {
 }
 ```
 
-Then:
+**Then:**
 
 ``` html
 <button class="bg-primary">
@@ -678,9 +660,9 @@ Then:
 
 ------------------------------------------------------------------------
 
-## Q40. `theme.extend` kya karta hai?
+**Q40. `theme.extend` kya karta hai?**
 
-Existing theme ko replace kiye bina usme custom values add karne ke liye
+- Existing theme ko replace kiye bina usme custom values add karne ke liye
 use hota hai.
 
 ``` js
@@ -695,7 +677,7 @@ theme: {
 
 ------------------------------------------------------------------------
 
-## Q41. Custom color kaise define karenge?
+**Q41. Custom color kaise define karenge?**
 
 ``` js
 colors: {
@@ -703,7 +685,7 @@ colors: {
 }
 ```
 
-Then:
+**Then:**
 
 ``` html
 <div class="bg-primary">
@@ -711,16 +693,16 @@ Then:
 
 ------------------------------------------------------------------------
 
-## Q42. Arbitrary values kya hoti hain?
+**Q42. Arbitrary values kya hoti hain?**
 
-Jab predefined Tailwind value available nahi ho, tab square brackets use
+- Jab predefined Tailwind value available nahi ho, tab square brackets use
 kar sakte hain.
 
 ``` html
 <div class="w-[350px]">
 ```
 
-Other examples:
+**Other examples:**
 
 ``` html
 <div class="bg-[#123456]">
@@ -729,21 +711,21 @@ Other examples:
 
 ------------------------------------------------------------------------
 
-## Q43. Arbitrary value ka benefit?
+**Q43. Arbitrary value ka benefit?**
 
-Custom one-off values ke liye useful hai without unnecessarily adding
+- Custom one-off values ke liye useful hai without unnecessarily adding
 every value to the design configuration.
 
 ------------------------------------------------------------------------
 
-# 8. Components & Reusability
+## <u>`8. Components & Reusability`</u>
 
-## Q44. Tailwind mein reusable component kaise banate hain?
+**Q44. Tailwind mein reusable component kaise banate hain?**
 
-Tailwind khud component framework nahi hai. Reusable components
+- Tailwind khud component framework nahi hai. Reusable components
 React/Vue/Blade etc. mein banaye ja sakte hain.
 
-React example:
+**React example:**
 
 ``` jsx
 function Button({ children }) {
@@ -755,7 +737,7 @@ function Button({ children }) {
 }
 ```
 
-Then:
+**Then:**
 
 ``` jsx
 <Button>Login</Button>
@@ -764,20 +746,20 @@ Then:
 
 ------------------------------------------------------------------------
 
-## Q45. Tailwind mein bahut saari classes HTML mein aa jayein to kya karenge?
+**Q45. Tailwind mein bahut saari classes HTML mein aa jayein to kya karenge?**
 
-Options:
+**Options:**
 
 1.  Reusable component
 2.  Component abstraction
 3.  Appropriate CSS extraction
-4.  `@apply` where it genuinely improves maintainability
+4.  **`@apply`** where it genuinely improves maintainability
 
 ------------------------------------------------------------------------
 
-## Q46. `@apply` kya hai?
+**Q46. `@apply` kya hai?**
 
-`@apply` ke through Tailwind utility classes ko custom CSS rule mein
+- **`@apply`** ke through Tailwind utility classes ko custom CSS rule mein
 combine kar sakte hain.
 
 ``` css
@@ -786,7 +768,7 @@ combine kar sakte hain.
 }
 ```
 
-Then:
+**Then:**
 
 ``` html
 <button class="btn">
@@ -796,44 +778,41 @@ Then:
 
 ------------------------------------------------------------------------
 
-## Q47. Kya har component ke liye `@apply` use karna chahiye?
+**Q47. Kya har component ke liye `@apply` use karna chahiye?**
 
-**No.**
-
-Tailwind ka main benefit utility composition hai. Har jagah custom
-classes banane se utility-first approach ka advantage kam ho sakta hai.
-
-Reusable UI components ke liye framework components often better option
+- **No.** , Tailwind ka main benefit utility composition hai. Har jagah custom
+- classes banane se utility-first approach ka advantage kam ho sakta hai.
+- Reusable UI components ke liye framework components often better option
 hote hain.
 
 ------------------------------------------------------------------------
 
-# 9. Advanced Interview Questions
+## <u>`9. Advanced Interview Questions`</u>
 
-## Q48. Tailwind CSS production mein unused CSS kaise reduce karta hai?
+**Q48. Tailwind CSS production mein unused CSS kaise reduce karta hai?**
 
-Tailwind project ke source files ko scan karke used utility classes ke
+- Tailwind project ke source files ko scan karke used utility classes ke
 basis par CSS generate karta hai. Isse production CSS ko lean rakhne
 mein help milti hai.
 
 ------------------------------------------------------------------------
 
-## Q49. Tailwind CSS JIT kya tha?
+**Q49. Tailwind CSS JIT kya tha?**
 
-**JIT = Just-In-Time compiler.**
+- **JIT = Just-In-Time compiler.**
 
-JIT approach ne Tailwind ko requested utilities ko on-demand generate
+- JIT approach ne Tailwind ko requested utilities ko on-demand generate
 karne mein capable banaya aur arbitrary values jaise features ko
 practical banaya.
 
-Modern Tailwind versions mein JIT architecture core workflow ka part
+- Modern Tailwind versions mein JIT architecture core workflow ka part
 hai, isliye separate JIT mode enable karna generally required nahi hota.
 
 ------------------------------------------------------------------------
 
-## Q50. Tailwind CSS ka major disadvantage kya hai?
+**Q50. Tailwind CSS ka major disadvantage kya hai?**
 
-Potential disadvantages:
+**Potential disadvantages:**
 
 -   HTML/JSX mein classes bahut long ho sakti hain
 -   Beginners ko utility names initially difficult lag sakte hain
@@ -842,11 +821,11 @@ Potential disadvantages:
 
 ------------------------------------------------------------------------
 
-## Q51. Tailwind CSS mein CSS file ki zarurat nahi hoti?
+**Q51. Tailwind CSS mein CSS file ki zarurat nahi hoti?**
 
 **Completely nahi.**
 
-Tailwind CSS ke saath custom CSS bhi likh sakte ho.
+- Tailwind CSS ke saath custom CSS bhi likh sakte ho.
 
 ``` css
 .custom-animation {
@@ -854,13 +833,13 @@ Tailwind CSS ke saath custom CSS bhi likh sakte ho.
 }
 ```
 
-Tailwind aur normal CSS ko combine kiya ja sakta hai.
+- Tailwind aur normal CSS ko combine kiya ja sakta hai.
 
 ------------------------------------------------------------------------
 
-## Q52. Tailwind CSS ko React ke saath use kar sakte hain?
+**Q52. Tailwind CSS ko React ke saath use kar sakte hain?**
 
-Yes.
+**Yes.**
 
 ``` jsx
 <div className="flex items-center justify-center bg-blue-500">
@@ -868,12 +847,11 @@ Yes.
 </div>
 ```
 
-Important: HTML mein `class` ki jagah React JSX mein `className` use
-hota hai.
+- Important: HTML mein **`class`** ki jagah React JSX mein **`className`** use hota hai.
 
 ------------------------------------------------------------------------
 
-## Q53. Tailwind + React ka advantage?
+**Q53. Tailwind + React ka advantage?**
 
 -   Fast UI development
 -   Responsive UI
@@ -884,9 +862,9 @@ hota hai.
 
 ------------------------------------------------------------------------
 
-# 10. Practical Coding Questions
+## <u>`10. Practical Coding Questions`</u>
 
-## Q54. Ek responsive navbar banao.
+**Q54. Ek responsive navbar banao.**
 
 ``` html
 <nav class="flex items-center justify-between p-4">
@@ -908,7 +886,7 @@ hota hai.
 
 ------------------------------------------------------------------------
 
-## Q55. Responsive card kaise banayenge?
+**Q55. Responsive card kaise banayenge?**
 
 ``` html
 <div class="mx-auto max-w-sm overflow-hidden rounded-xl bg-white shadow-lg">
@@ -932,7 +910,7 @@ hota hai.
 
 ------------------------------------------------------------------------
 
-## Q56. Centered login form kaise banayenge?
+**Q56. Centered login form kaise banayenge?**
 
 ``` html
 <div class="flex min-h-screen items-center justify-center bg-gray-100">
@@ -962,9 +940,9 @@ hota hai.
 
 ------------------------------------------------------------------------
 
-# 11. Scenario-Based Questions
+## <u>`11. Scenario-Based Questions`</u>
 
-## Q57. Client ne bola mobile par 1 column aur desktop par 4 cards chahiye. Kya karoge?
+**Q57. Client ne bola mobile par 1 column aur desktop par 4 cards chahiye. Kya karoge?**
 
 ``` html
 <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -972,7 +950,7 @@ hota hai.
 
 ------------------------------------------------------------------------
 
-## Q58. Button hover par dark hona chahiye.
+**Q58. Button hover par dark hona chahiye.**
 
 ``` html
 <button class="bg-blue-500 hover:bg-blue-700">
@@ -980,7 +958,7 @@ hota hai.
 
 ------------------------------------------------------------------------
 
-## Q59. Desktop par sidebar visible aur mobile par hidden.
+**Q59. Desktop par sidebar visible aur mobile par hidden.**
 
 ``` html
 <aside class="hidden lg:block">
@@ -988,7 +966,7 @@ hota hai.
 
 ------------------------------------------------------------------------
 
-## Q60. Mobile par column aur desktop par row.
+**Q60. Mobile par column aur desktop par row.**
 
 ``` html
 <div class="flex flex-col md:flex-row">
@@ -996,7 +974,7 @@ hota hai.
 
 ------------------------------------------------------------------------
 
-## Q61. Image ko responsive kaise banayenge?
+**Q61. Image ko responsive kaise banayenge?**
 
 ``` html
 <img class="h-auto w-full" src="image.jpg">
@@ -1004,7 +982,7 @@ hota hai.
 
 ------------------------------------------------------------------------
 
-## Q62. Image ko crop karke container ke andar fit karna ho?
+**Q62. Image ko crop karke container ke andar fit karna ho?**
 
 ``` html
 <img class="h-64 w-full object-cover" src="image.jpg">
@@ -1012,7 +990,7 @@ hota hai.
 
 ------------------------------------------------------------------------
 
-## Q63. Text ko truncate kaise karenge?
+**Q63. Text ko truncate kaise karenge?**
 
 ``` html
 <p class="truncate">
@@ -1020,11 +998,11 @@ hota hai.
 </p>
 ```
 
-Multiple lines ke liye line-clamp utilities use ki ja sakti hain.
+- Multiple lines ke liye line-clamp utilities use ki ja sakti hain.
 
 ------------------------------------------------------------------------
 
-## Q64. Element ko absolute position kaise denge?
+**Q64. Element ko absolute position kaise denge?**
 
 ``` html
 <div class="relative">
@@ -1034,11 +1012,11 @@ Multiple lines ke liye line-clamp utilities use ki ja sakti hain.
 </div>
 ```
 
-Parent ko usually `relative` dena useful hota hai.
+- Parent ko usually **`relative`** dena useful hota hai.
 
 ------------------------------------------------------------------------
 
-## Q65. Z-index kaise set karte hain?
+**Q65. Z-index kaise set karte hain?**
 
 ``` html
 <div class="z-10">
@@ -1052,9 +1030,9 @@ Ya:
 
 ------------------------------------------------------------------------
 
-# 12. Most Important Tailwind Classes
+## <u>`12. Most Important Tailwind Classes`</u>
 
-Interview ke liye ye classes zaroor yaad rakho:
+- Interview ke liye ye classes zaroor yaad rakho:
 
 ``` text
 flex
@@ -1119,88 +1097,131 @@ lg:
 xl:
 2xl:
 ```
-
 ------------------------------------------------------------------------
 
-# 13. Top 10 Must-Prepare Questions
+## 13. Reusable Component
+**1. Simple HTML me reusable class**
+- Agar same button baar-baar chahiye:
+```html
+<button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+  Save
+</button>
 
-Agar tum Frontend / PHP / React Developer interview ke liye prepare kar
-rahi ho, to ye questions especially strong hone chahiye:
+<button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+  Submit
+</button>
+```
 
-1.  Tailwind CSS kya hai?
-2.  Utility-first CSS kya hai?
-3.  Tailwind vs Bootstrap?
-4.  Responsive/mobile-first approach?
-5.  `flex`, `items-center`, `justify-center`?
-6.  Grid aur responsive grid?
-7.  `hover:`, `focus:`, `dark:` variants?
-8.  `group` / `group-hover`?
-9.  `@apply` kab aur kyun?
-10. React mein Tailwind reusable components kaise banate hain?
+- Isme classes repeat ho rahi hain.
 
-------------------------------------------------------------------------
+**Tailwind me @apply use karke reusable CSS class bana sakte ho:**
 
-# Quick Interview Revision
+```css
+.btn-primary {
+  @apply px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700;
+}
+```
 
-## One-line answers
+**Ab:**
+```html
+<button class="btn-primary">Save</button>
+<button class="btn-primary">Submit</button>
+```
 
-**Tailwind CSS:** Utility-first CSS framework.
+**2. React me reusable component — recommended**
+- React + Tailwind me ye approach zyada useful hai:
 
-**Utility-first:** Small utility classes ko combine karke UI banana.
+```js
+function Button({ children }) {
+  return (
+    <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+      {children}
+    </button>
+  );
+}
+```
+**Use:**
 
-**Mobile-first:** Base styles mobile ke liye, `sm:`, `md:`, `lg:` etc.
-larger screens ke liye.
+```html
+<Button>Save</Button>
+<Button>Submit</Button>
+<Button>Login</Button>
+```
 
-**`flex`:** `display: flex`.
+**3. Props ke through component ko flexible banana**
+```js
+function Button({ children, variant = "primary" }) {
+  const styles = {
+    primary: "bg-blue-600 hover:bg-blue-700",
+    danger: "bg-red-600 hover:bg-red-700",
+    success: "bg-green-600 hover:bg-green-700",
+  };
 
-**`grid`:** `display: grid`.
+  return (
+    <button
+      className={`px-4 py-2 text-white rounded-lg ${styles[variant]}`}
+    >
+      {children}
+    </button>
+  );
+}
+```
+**Ab:**
+```html
+<Button>Save</Button>
 
-**`items-center`:** `align-items: center`.
+<Button variant="danger">
+  Delete
+</Button>
 
-**`justify-center`:** `justify-content: center`.
+<Button variant="success">
+  Approve
+</Button>
+```
 
-**`gap-4`:** Flex/Grid gap.
+**4. Chhote components ka structure**
+- Real project me aise organize kar sakti ho:
 
-**`rounded-full`:** Fully rounded corners.
+```text
+src/
+├── components/
+│   ├── Button.jsx
+│   ├── Card.jsx
+│   ├── Input.jsx
+│   ├── Navbar.jsx
+│   ├── Modal.jsx
+│   └── Badge.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   └── Login.jsx
+```
 
-**`hover:`:** Hover state styling.
+**Example ``Card.jsx:``**
 
-**`focus:`:** Focus state styling.
+```js
+function Card({ title, children }) {
+  return (
+    <div className="p-6 bg-white rounded-xl shadow-md">
+      <h2 className="text-xl font-bold mb-3">
+        {title}
+      </h2>
 
-**`dark:`:** Dark mode styling.
+      <div>
+        {children}
+      </div>
+    </div>
+  );
+}
 
-**`group-hover:`:** Parent hover par child styling.
+export default Card;
+```
 
-**`@apply`:** Utility classes ko custom CSS rule mein apply karna.
+**Use:**
 
-**Arbitrary value:** Square brackets mein custom value,
-e.g. `w-[350px]`.
-
-**Responsive example:** `text-sm md:text-lg lg:text-2xl`.
-
-------------------------------------------------------------------------
-
-# Interview Tip
-
-Tailwind interview mein sirf classes yaad karna enough nahi hai.
-
-Tumhe ye explain karna aana chahiye:
-
--   Why Tailwind?
--   Tailwind vs Bootstrap
--   Utility-first architecture
--   Responsive design
--   Flexbox/Grid
--   State variants
--   Dark mode
--   Reusable components
--   `@apply`
--   Custom theme/configuration
--   Arbitrary values
--   React + Tailwind
--   Production optimization
--   Real-world component design
-
-**Best preparation strategy:** Har concept ko ek chhote practical UI
-component ke saath practice karo --- Navbar, Card, Login Form, Modal,
-Sidebar, Dashboard, Table aur Responsive Layout.
+```html
+<Card title="User Profile">
+  <p>Jyoti Singh</p>
+  <p>Frontend Developer</p>
+</Card>
+```
